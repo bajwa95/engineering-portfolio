@@ -1,5 +1,29 @@
 window.PORTFOLIO_PROJECTS = [
   {
+    title: "Forklift-Mounted Workstation Power Integration",
+    mediaTitle: "Forklift Workstation Power",
+    mediaSubtitle: "32 VDC · DC-DC conversion · mobile computing",
+    kicker: "Industrial Power Integration · Reliability Improvement",
+    description: "Replaced a costly UPS-dependent forklift workstation with a fused, key-switched DC power system for a 24 V thermal label printer and 20 V Windows tablet computer.",
+    tags: ["DC-DC", "32 VDC", "Power Distribution", "Thermal Printer", "Troubleshooting"],
+    href: "projects/forklift-workstation.html",
+    image: "assets/forklift-workstation/finlintegrationworking.jpg",
+    imageAlt: "Forklift-mounted computer and thermal label printer after direct power integration",
+    featured: true
+  },
+  {
+    title: "Forklift Charger Electrical Reconfiguration",
+    mediaTitle: "Forklift Charger Reconfiguration",
+    mediaSubtitle: "Industrial electrical · transformer configuration · equipment relocation",
+    kicker: "Industrial Electrical · Equipment Integration",
+    description: "Industrial charger relocation and electrical reconfiguration project. Detailed case study is being documented from the original installation, transformer information and final operating setup.",
+    tags: ["Industrial Electrical", "Transformer", "Charger", "Troubleshooting"],
+    image: "assets/forklift-charger/20260324_104900.jpg",
+    imageAlt: "Forklift charger installation during electrical reconfiguration work",
+    status: "Case study in progress",
+    featured: false
+  },
+  {
     title: "Sliding Gate Limit Sensor Retrofit",
     mediaTitle: "Gate Sensor Retrofit",
     mediaSubtitle: "Industrial controls · sensing · reliability",
