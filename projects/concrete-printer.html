@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Cable-driven parallel 3D concrete printer engineering case study integrating motion control, electronics, HMI, computer vision and mechanical systems.">
+<title>Cable-Driven 3D Concrete Printer | Garry Bajwa</title><link rel="stylesheet" href="../styles.css"></head>
+<body>
+<header class="site-header"><div class="container nav-wrap"><a class="brand" href="../index.html"><span class="brand-mark">GB</span><span>Garry Bajwa</span></a><nav class="nav"><a href="../index.html#projects">Projects</a><a href="../index.html#contact">Contact</a></nav></div></header>
+<main>
+<section class="case-hero"><div class="container">
+  <div class="breadcrumb"><a href="../index.html">Portfolio</a> / Cable-Driven Parallel 3D Concrete Printer</div>
+  <div class="case-title"><p class="eyebrow">Motion Control · R&D · Systems Integration</p><h1>Cable-Driven Parallel 3D Concrete Printer</h1>
+  <p class="lead">A large-scale robotic printing platform built around movable cable towers, a suspended cubic end effector and multidisciplinary control/electronics integration.</p>
+  <div class="case-meta"><span class="tag">Motion Control</span><span class="tag">PID</span><span class="tag">OpenCV</span><span class="tag">HMI</span><span class="tag">Electronics</span></div></div>
+
+  <div class="case-intro-grid">
+    <div class="detail-card"><h3>System architecture</h3><p>Four movable tower stations supported a cable-suspended cubic end effector carrying the extrusion nozzle. Screw jacks provided a rigid operating base after positioning.</p></div>
+    <div class="detail-card"><h3>My contribution</h3><p>Electronics, control integration, wiring, motion-system bring-up, HMI work, testing, troubleshooting and multidisciplinary engineering support.</p></div>
+  </div>
+  <div class="system-diagram"><p class="eyebrow">Control concept</p><div class="flow">
+    <span class="node">Motion Controller</span><span class="arrow">→</span><span class="node">Motor / Cable Axes</span><span class="arrow">→</span>
+    <span class="node">Suspended End Effector</span><span class="arrow">↔</span><span class="node">Camera Feedback</span><span class="arrow">→</span><span class="node">PID Correction</span>
+  </div></div>
+</div></section>
+
+<section class="section"><div class="container"><p class="eyebrow">The challenge</p><h2>Coordinating a large physical system with multiple interacting subsystems</h2>
+<p class="section-intro">The project required motion, electronics, mechanics, software and calibration to work as one platform rather than as isolated components.</p>
+<div class="case-list">
+  <article class="case-card"><h3>Mechanical & motion architecture</h3><div class="case-grid">
+    <div class="case-block"><strong>Movable towers</strong><span>Tower stations could be repositioned for setup flexibility and then stabilized for operation using lowered screw jacks.</span></div>
+    <div class="case-block"><strong>Suspended end effector</strong><span>A cubic cable-driven end effector carried the extrusion nozzle and moved in XYZ through coordinated cable motion.</span></div>
+  </div></article>
+  <article class="case-card"><h3>Controls & electronics</h3><div class="case-grid">
+    <div class="case-block"><strong>Motion control</strong><span>The platform incorporated multi-axis industrial motion hardware, motor/drive integration and closed-loop correction work.</span></div>
+    <div class="case-block"><strong>Human interface</strong><span>HMI functions supported setup and tower-related adjustment/operation during system development.</span></div>
+  </div></article>
+  <article class="case-card"><h3>Camera-assisted correction</h3><div class="case-grid">
+    <div class="case-block"><strong>Observation</strong><span>An overhead camera was used as an additional measurement source for positional error.</span></div>
+    <div class="case-block"><strong>Correction concept</strong><span>OpenCV-based positional feedback supported PID-style correction of observed error during R&D.</span></div>
+  </div></article>
+</div></div></section>
+
+<section class="section section-alt"><div class="container">
+<p class="eyebrow">Validation</p><h2>From integration to physical printing</h2>
+<p class="section-intro">The platform progressed beyond bench integration to actual concrete-printing trials, providing a full-system test of motion, electronics, software and extrusion behavior.</p>
+<div class="callout">A collaborator’s public project article reports a 14-month development effort and approximately 2–2.5 mm printing accuracy; those figures are attributed to that article rather than presented here as my independent measurement.</div>
+<div class="skill-cloud"><span>Systems Integration</span><span>Motion Control</span><span>Industrial Electronics</span><span>PID Control</span><span>OpenCV</span><span>Python</span><span>HMI</span><span>R&D Testing</span></div>
+<div class="project-nav"><a href="komo-cnc.html">← KOMO CNC</a><a href="food-robot.html">Next: Mobile Robot →</a></div>
+</div></section>
+</main>
+<footer class="site-footer"><div class="container footer-wrap"><span>Garry Bajwa · Engineering & Automation Portfolio</span><a class="external-link" href="https://www.linkedin.com/in/gurwinderjit-singh" target="_blank" rel="noreferrer">LinkedIn</a></div></footer>
+</body></html>
