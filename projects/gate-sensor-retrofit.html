@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Sliding gate limit sensor retrofit case study: diagnosing a corrosion-prone mechanical contact sensor and redesigning it with dual glass-sealed reed switches and a custom 3D-printed mount.">
+  <title>Sliding Gate Limit Sensor Retrofit | Garry Bajwa</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container nav-wrap">
+  <a class="brand" href="../index.html"><span class="brand-mark">GB</span><span>Garry Bajwa</span></a>
+  <nav class="nav"><a href="../index.html#projects">Projects</a><a href="#diagnosis">Diagnosis</a><a href="#retrofit">Retrofit</a><a href="#validation">Validation</a></nav>
+</div></header>
+
+<main id="main">
+<section class="case-hero"><div class="container">
+  <div class="breadcrumb"><a href="../index.html">Portfolio</a> / Sliding Gate Limit Sensor Retrofit</div>
+  <div class="case-title">
+    <p class="eyebrow">Industrial Controls · Sensor Retrofit · Reliability</p>
+    <h1>Sliding Gate Limit Sensor Retrofit</h1>
+    <p class="lead">Diagnosed a failed gate-position sensing system and redesigned it from a corrosion-prone mechanical contact arrangement to a glass-sealed reed-switch retrofit with custom 3D-printed mounting hardware.</p>
+    <div class="case-meta"><span class="tag">Controls</span><span class="tag">Sensors</span><span class="tag">Root Cause</span><span class="tag">Onshape</span><span class="tag">3D Printing</span></div>
+  </div>
+
+  <div class="case-cover gate-cover" style="background-image:linear-gradient(180deg,rgba(8,42,70,.03),rgba(8,42,70,.78)),url('../assets/gate-sensor/field-diagnostics.jpg'),linear-gradient(135deg,#9ed8f5,#5db8b5);">
+    <div class="case-cover-copy"><strong>Field diagnosis at the gate operator</strong><span>The repair began by checking the installed drive, wiring and position-sensing path rather than assuming the motor or controller was the cause.</span></div>
+  </div>
+
+  <div class="case-intro-grid">
+    <div class="detail-card"><h3>My role</h3><p>Fault isolation, sensing concept, prototype development, Onshape enclosure design, wiring and integration, positioning, calibration and functional validation.</p></div>
+    <div class="detail-card"><h3>Engineering objective</h3><p>Restore reliable gate-position feedback while removing the original corrosion-sensitive mechanical contact as a recurring failure point.</p></div>
+  </div>
+
+  <div class="system-diagram">
+    <p class="eyebrow">Final sensing concept</p>
+    <div class="flow"><span class="node">Gate Motion</span><span class="arrow">→</span><span class="node">Permanent Magnet</span><span class="arrow">→</span><span class="node">Dual Reed Switches</span><span class="arrow">→</span><span class="node">Existing Controller</span><span class="arrow">→</span><span class="node">Position State</span></div>
+  </div>
+</div></section>
+
+<section id="diagnosis" class="section"><div class="container">
+  <p class="eyebrow">01 · Failure & diagnosis</p><h2>Finding the weak point instead of replacing the whole system</h2>
+  <div class="gate-compare">
+    <article class="case-card">
+      <h3>Observed failure</h3>
+      <p>The original position sensor used a spring-loaded mechanical contact arrangement. Outdoor moisture and corrosion degraded the contact area until reliable switching was lost.</p>
+      <p>The gate operator therefore had a sensing problem even though the rest of the drive system still required separate verification.</p>
+    </article>
+    <figure class="gate-media-card">
+      <img src="../assets/gate-sensor/corroded-original-illustration.jpg" alt="Illustrative reconstruction of a corroded spring-loaded mechanical contact sensor">
+      <figcaption><strong>Original failure mode — illustrative reconstruction</strong><span>This image was created to communicate the observed corrosion and damaged mechanical-contact failure mode because the original failed sensor was not photographed clearly enough for publication. It is not documentary evidence.</span></figcaption>
+    </figure>
+  </div>
+  <div class="callout">The key decision was to address the sensing architecture that had failed rather than simply reproduce the same exposed mechanical-contact arrangement.</div>
+</div></section>
+
+<section id="retrofit" class="section section-alt"><div class="container">
+  <p class="eyebrow">02 · Redesign & integration</p><h2>From exposed mechanical contact to glass-sealed magnetic sensing</h2>
+  <p class="section-intro">I replaced the failure-prone contact concept with two glass-sealed reed switches actuated by a single permanent magnet, then designed a purpose-built enclosure/bracket in Onshape to position and protect the new sensing hardware.</p>
+
+  <div class="gate-stage-grid">
+    <article class="gate-stage"><span class="stage-no">01</span><h3>Understand the signal</h3><p>Confirmed what position feedback the existing controller required and separated the sensing fault from the drive mechanism.</p></article>
+    <article class="gate-stage"><span class="stage-no">02</span><h3>Choose a new sensing method</h3><p>Selected magnetically actuated glass-sealed reed switches to remove the exposed moving electrical contact from the sensing element.</p></article>
+    <article class="gate-stage"><span class="stage-no">03</span><h3>Design the mount</h3><p>Designed the blue enclosure/bracket in Onshape so the two reed switches and magnet could be located consistently and integrated into the existing assembly.</p></article>
+    <article class="gate-stage"><span class="stage-no">04</span><h3>Install & calibrate</h3><p>Wired the replacement, adjusted physical positioning and verified that the controller interpreted the resulting states correctly.</p></article>
+  </div>
+
+  <div class="gate-media-grid">
+    <figure class="gate-media-card is-portrait">
+      <img src="../assets/gate-sensor/field-diagnostics.jpg" alt="Sliding gate operator opened during electrical troubleshooting">
+      <figcaption><strong>Field troubleshooting</strong><span>Inspection of the operator, wiring and sensing path during fault isolation.</span></figcaption>
+    </figure>
+    <figure class="gate-media-card is-portrait">
+      <img src="../assets/gate-sensor/final-reed-module.jpg" alt="Custom blue 3D-printed sensor module containing two reed switches">
+      <figcaption><strong>Final replacement module</strong><span>Custom 3D-printed mounting hardware with the dual reed-switch arrangement used in the retrofit.</span></figcaption>
+    </figure>
+    <figure class="gate-media-card">
+      <img src="../assets/gate-sensor/corroded-original-illustration.jpg" alt="Illustrative reconstruction of the corroded original sensor">
+      <figcaption><strong>Why the architecture changed</strong><span>Illustrative reconstruction of the original spring-loaded contact failure mode; clearly separated here from the documentary project photos.</span></figcaption>
+    </figure>
+  </div>
+</div></section>
+
+<section id="validation" class="section"><div class="container">
+  <p class="eyebrow">03 · Validation</p><h2>Verify the complete operating sequence, not only the sensor</h2>
+  <div class="case-list">
+    <article class="case-card"><div class="case-grid">
+      <div class="case-block"><strong>Normal state</strong><span>With the system ready and no active error, the gate display showed <code>--</code>.</span></div>
+      <div class="case-block"><strong>Open command</strong><span>Pressing the remote changed the display to <code>-OP-</code>, confirming that the controller entered the opening sequence.</span></div>
+      <div class="case-block"><strong>Mechanical response</strong><span>The motor and visible drive gears began rotating and the gate moved as commanded.</span></div>
+      <div class="case-block"><strong>System result</strong><span>Normal gate operation was restored with the new sensing arrangement integrated into the existing controller.</span></div>
+    </div></article>
+  </div>
+  <div class="media-note"><strong>Working video:</strong> a validation clip showing the display transition from <code>--</code> to <code>-OP-</code>, followed by motor/gear movement and gate travel, can be added to this page when the video file is prepared for web use.</div>
+</div></section>
+
+<section class="section section-alt"><div class="container">
+  <p class="eyebrow">Engineering takeaway</p><h2>A repair that removes the failure mechanism</h2>
+  <div class="gate-compare">
+    <div class="detail-card"><h3>Before</h3><p>Spring-loaded mechanical contact exposed to an outdoor environment, with corrosion and contact degradation creating an unreliable position signal.</p></div>
+    <div class="detail-card"><h3>After</h3><p>Two magnetically actuated, glass-sealed reed switches with a permanent magnet and a custom 3D-printed mount — a simpler and more weather-resistant sensing architecture.</p></div>
+  </div>
+  <div class="skill-cloud"><span>Industrial Controls</span><span>Sensor Integration</span><span>Electrical Troubleshooting</span><span>Root Cause Analysis</span><span>Reed Switches</span><span>Onshape</span><span>3D Printing</span><span>Electromechanical Systems</span><span>Equipment Reliability</span><span>Field Integration</span></div>
+  <div class="callout">This project reflects the way I approach maintenance and automation problems: understand why the original design failed, then make the replacement easier to support and less likely to fail in the same way.</div>
+  <div class="project-nav"><a href="../index.html#projects">← All projects</a><a href="komo-cnc.html">Next: KOMO CNC →</a></div>
+</div></section>
+</main>
+
+<footer class="site-footer"><div class="container footer-wrap"><span>Garry Bajwa · Engineering & Automation Portfolio</span><a class="external-link" href="https://www.linkedin.com/in/gurwinderjit-singh" target="_blank" rel="noreferrer">LinkedIn</a></div></footer>
+</body></html>

@@ -1,5 +1,17 @@
 window.PORTFOLIO_PROJECTS = [
   {
+    title: "Sliding Gate Limit Sensor Retrofit",
+    mediaTitle: "Gate Sensor Retrofit",
+    mediaSubtitle: "Industrial controls · sensing · reliability",
+    kicker: "Controls Troubleshooting · Sensor Integration",
+    description: "Redesigned a corrosion-prone gate-position sensor from a mechanical contact arrangement to a glass-sealed dual reed-switch retrofit with a custom 3D-printed mount.",
+    tags: ["Controls", "Sensors", "Root Cause", "Onshape", "3D Printing"],
+    href: "projects/gate-sensor-retrofit.html",
+    image: "assets/gate-sensor/final-reed-module.jpg",
+    imageAlt: "Custom 3D-printed gate sensor module with dual reed switches",
+    featured: true
+  },
+  {
     title: "KOMO Xtreme XL CNC",
     mediaTitle: "KOMO Xtreme XL CNC",
     mediaSubtitle: "Industrial automation · CNC · reliability",
