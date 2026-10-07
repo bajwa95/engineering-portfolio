@@ -33,11 +33,7 @@
           A visual notebook for smaller technical wins, troubleshooting moments, prototypes, experiments and field work that do not need a full case study.
         </p>
       </div>
-      <div class="field-notes-intro">
-        <div><strong>Why this page exists</strong><span>Not every useful engineering story needs a full project page.</span></div>
-        <div><strong>What belongs here</strong><span>Repairs, test setups, prototypes, measurements, fixtures, wiring, calibration and short technical observations.</span></div>
-        <div><strong>Public-safe by default</strong><span>Only sanitized media and details that are appropriate for the public portfolio.</span></div>
-      </div>
+      <p class="lead field-notes-lead">A visual archive of engineering work — builds, repairs, prototypes, diagnostics, fixtures, electronics and field work. Click any image to view it full size.</p>
     </div>
   </section>
 
@@ -45,17 +41,27 @@
     <div class="container">
       <div class="section-heading-row">
         <div>
-          <p class="eyebrow">Technical gallery</p>
-          <h2>Field notes & build snapshots</h2>
+          <p class="eyebrow">Visual archive</p>
+          <h2>Builds, fixes & experiments</h2>
         </div>
-        <p class="section-intro">A growing collection of practical engineering work.</p>
+        <p class="section-intro">Photo-first. Minimal text. Full-size viewing on click.</p>
       </div>
 
-      <div id="field-notes-grid" class="field-notes-grid"></div>
+      <div id="field-notes-grid" class="field-notes-grid" aria-label="Engineering photo gallery"></div>
       <noscript><p class="media-note">JavaScript is required to display Field Notes.</p></noscript>
     </div>
   </section>
 </main>
+
+<div class="field-lightbox" id="field-notes-lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Expanded engineering photo">
+  <button class="field-lightbox-close" type="button" aria-label="Close image">×</button>
+  <button class="field-lightbox-nav field-lightbox-prev" type="button" aria-label="Previous image">‹</button>
+  <figure class="field-lightbox-figure">
+    <img id="field-lightbox-image" alt="">
+    <figcaption id="field-lightbox-caption"></figcaption>
+  </figure>
+  <button class="field-lightbox-nav field-lightbox-next" type="button" aria-label="Next image">›</button>
+</div>
 
 <footer class="site-footer">
   <div class="container footer-wrap">
@@ -64,7 +70,7 @@
   </div>
 </footer>
 
-<script src="field-notes-data.js?v=20261007a"></script>
-<script src="field-notes.js?v=20261007a"></script>
+<script src="field-notes-data.js?v=20261007b"></script>
+<script src="field-notes.js?v=20261007b"></script>
 </body>
 </html>
