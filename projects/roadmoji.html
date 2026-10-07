@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Roadmoji Raspberry Pi and Stream Deck prototype for controlling a full-screen vehicle message/emoji display.">
+<title>Roadmoji Display Controller | Garry Bajwa</title><link rel="stylesheet" href="../styles.css"></head>
+<body>
+<header class="site-header"><div class="container nav-wrap"><a class="brand" href="../index.html"><span class="brand-mark">GB</span><span>Garry Bajwa</span></a><nav class="nav"><a href="../index.html#projects">Projects</a><a href="../index.html#contact">Contact</a></nav></div></header>
+<main>
+<section class="case-hero"><div class="container">
+<div class="breadcrumb"><a href="../index.html">Portfolio</a> / Roadmoji</div>
+<div class="case-title"><p class="eyebrow">Embedded Linux · Human Interface · Prototype</p><h1>Roadmoji Display Controller</h1>
+<p class="lead">A Raspberry Pi + Elgato Stream Deck prototype that lets a driver trigger full-screen visual messages and emojis using physical buttons while media can be managed through a web interface.</p>
+<div class="case-meta"><span class="tag">Raspberry Pi</span><span class="tag">Python</span><span class="tag">PyQt</span><span class="tag">Flask</span><span class="tag">Stream Deck</span></div></div>
+
+<div class="case-intro-grid">
+  <div class="detail-card"><h3>Use case</h3><p>A simple rear-display concept for ride-share/vehicle communication where the normal screen can be replaced temporarily by a button-triggered message or emoji.</p></div>
+  <div class="detail-card"><h3>Status</h3><p>Functional personal prototype. It has been bench-tested but is not represented as a completed in-vehicle deployment.</p></div>
+</div>
+<div class="system-diagram"><p class="eyebrow">Interaction path</p><div class="flow">
+  <span class="node">Stream Deck Button</span><span class="arrow">→</span><span class="node">Python Event Logic</span><span class="arrow">→</span>
+  <span class="node">PyQt Full-Screen Renderer</span><span class="arrow">→</span><span class="node">HDMI Display</span>
+</div></div>
+</div></section>
+
+<section class="section"><div class="container">
+<p class="eyebrow">Design goals</p><h2>Fast physical control with low operator distraction</h2>
+<div class="case-list">
+  <article class="case-card"><h3>Button behavior</h3><div class="case-grid">
+    <div class="case-block"><strong>Short press</strong><span>Displays the selected media temporarily, then returns to the default image.</span></div>
+    <div class="case-block"><strong>Long press</strong><span>Sets a selected media item as the persistent default/main image.</span></div>
+  </div></article>
+  <article class="case-card"><h3>Media management</h3><div class="case-grid">
+    <div class="case-block"><strong>Web upload</strong><span>A Flask interface supports adding or changing media without editing code on the Raspberry Pi.</span></div>
+    <div class="case-block"><strong>Automatic mapping</strong><span>Media files are discovered and mapped to the Stream Deck button layout for practical use.</span></div>
+  </div></article>
+  <article class="case-card"><h3>Reliability improvements</h3><div class="case-grid">
+    <div class="case-block"><strong>Startup</strong><span>The application is designed to launch automatically on boot rather than rely on manual desktop interaction.</span></div>
+    <div class="case-block"><strong>Device recovery</strong><span>Ongoing work addresses USB/Stream Deck reconnection and feedback behavior when the device is unplugged/reconnected.</span></div>
+  </div></article>
+</div>
+<div class="skill-cloud"><span>Raspberry Pi</span><span>Python</span><span>PyQt</span><span>Flask</span><span>Linux</span><span>USB Device Integration</span><span>UI / HMI Design</span></div>
+<p><a class="external-link" href="https://github.com/bajwa95/streamdeck-display" target="_blank" rel="noreferrer">View the public project repository →</a></p>
+<div class="project-nav"><a href="display-platform.html">← Display Platform</a><a href="../index.html#projects">All projects →</a></div>
+</div></section>
+</main>
+<footer class="site-footer"><div class="container footer-wrap"><span>Garry Bajwa · Engineering & Automation Portfolio</span><a class="external-link" href="https://www.linkedin.com/in/gurwinderjit-singh" target="_blank" rel="noreferrer">LinkedIn</a></div></footer>
+</body></html>
