@@ -48,9 +48,13 @@
     (project.tags || []).forEach(tag => tags.appendChild(make("span", "", tag)));
     card.appendChild(tags);
 
-    const link = make("a", "text-link", "Read full case study →");
-    link.href = project.href;
-    card.appendChild(link);
+    if (project.href) {
+      const link = make("a", "text-link", "Read full case study →");
+      link.href = project.href;
+      card.appendChild(link);
+    } else if (project.status) {
+      card.appendChild(make("div", "project-status", project.status));
+    }
 
     grid.appendChild(card);
   });
