@@ -152,82 +152,16 @@
           <p class="section-intro">Problem → reasoning → implementation → validation.</p>
         </div>
 
-        <div class="project-grid">
-          <article class="project-card featured">
-            <div class="project-media project-media-komo">
-              <div class="media-index">01</div>
-              <span>KOMO Xtreme XL CNC</span>
-              <small>Industrial automation · CNC · reliability</small>
-            </div>
-            <div class="project-kicker">Electrical · Controls · Mechanical Recovery</div>
-            <h3>KOMO Xtreme XL CNC</h3>
-            <p>Spindle overload troubleshooting, automatic tool-changer recovery and conveyor material-handling alignment on a production CNC system.</p>
-            <div class="tag-row">
-              <span>VFD</span><span>CNC</span><span>Electrical</span><span>Root Cause</span><span>Alignment</span>
-            </div>
-            <a class="text-link" href="projects/komo-cnc.html">Read full case study →</a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-media project-media-concrete">
-              <div class="media-index">02</div>
-              <span>Cable-Driven 3D Concrete Printer</span>
-              <small>Motion control · electronics · R&D</small>
-            </div>
-            <div class="project-kicker">Motion Control · R&D · Systems Engineering</div>
-            <h3>Cable-Driven Parallel 3D Concrete Printer</h3>
-            <p>Large-scale cable-driven robotic platform integrating motion control, electronics, software, mechanical systems and camera-assisted positional feedback.</p>
-            <div class="tag-row">
-              <span>Motion</span><span>PID</span><span>OpenCV</span><span>HMI</span><span>Integration</span>
-            </div>
-            <a class="text-link" href="projects/concrete-printer.html">Read full case study →</a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-media project-media-robot">
-              <div class="media-index">03</div>
-              <span>Autonomous Mobile Robot</span>
-              <small>LiDAR · navigation · Android integration</small>
-            </div>
-            <div class="project-kicker">Robotics · LiDAR · Android</div>
-            <h3>Food-Serving Mobile Robot</h3>
-            <p>Android-based destination selection integrated with SLAMTEC LiDAR, mapping/localization and autonomous navigation.</p>
-            <div class="tag-row">
-              <span>LiDAR</span><span>SLAM</span><span>Android</span><span>TCP/IP</span><span>Robotics</span>
-            </div>
-            <a class="text-link" href="projects/food-robot.html">Read full case study →</a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-media project-media-display">
-              <div class="media-index">04</div>
-              <span>Centralized Display Platform</span>
-              <small>Python · Raspberry Pi · networking</small>
-            </div>
-            <div class="project-kicker">Industrial Software · Raspberry Pi · Networking</div>
-            <h3>Centralized Multi-Screen Display Platform</h3>
-            <p>A server-driven display system for distributing media to multiple screens with live status, heartbeats, remote refresh and Raspberry Pi clients.</p>
-            <div class="tag-row">
-              <span>Python</span><span>Flask</span><span>Socket.IO</span><span>Linux</span><span>Raspberry Pi</span>
-            </div>
-            <a class="text-link" href="projects/display-platform.html">Read full case study →</a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-media project-media-roadmoji">
-              <div class="media-index">05</div>
-              <span>Roadmoji Vehicle Display</span>
-              <small>Embedded Linux · human interface · prototype</small>
-            </div>
-            <div class="project-kicker">Embedded Systems · Human Interface · Prototype</div>
-            <h3>Roadmoji Vehicle Display Controller</h3>
-            <p>Raspberry Pi and Stream Deck prototype for physical-button control of a rear display, with media management and a web console.</p>
-            <div class="tag-row">
-              <span>Raspberry Pi</span><span>Python</span><span>PyQt</span><span>Flask</span><span>USB HID</span>
-            </div>
-            <a class="text-link" href="projects/roadmoji.html">Read full case study →</a>
-          </article>
+        <div class="project-section-meta">
+          <span id="project-count" class="project-count" aria-live="polite"></span>
+          <span class="project-note">Projects load from one data file, so new case studies can be added without rebuilding this page.</span>
         </div>
+
+        <div class="project-grid" id="project-grid"></div>
+
+        <noscript>
+          <p class="media-note">JavaScript is required to display the project cards on this page. Individual case-study pages remain directly accessible.</p>
+        </noscript>
       </div>
     </section>
 
@@ -391,5 +325,7 @@
       <span>Automation · Systems · Electronics · Software</span>
     </div>
   </footer>
+  <script src="projects-data.js"></script>
+  <script src="site.js"></script>
 </body>
 </html>
