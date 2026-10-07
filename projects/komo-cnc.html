@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="KOMO Xtreme XL CNC troubleshooting case study: spindle VFD fault isolation, automatic tool changer recovery, conveyor alignment and production validation.">
+  <title>KOMO Xtreme XL CNC | Garry Bajwa</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container nav-wrap">
+  <a class="brand" href="../index.html"><span class="brand-mark">GB</span><span>Garry Bajwa</span></a>
+  <nav class="nav"><a href="../index.html#projects">Projects</a><a href="../index.html#capabilities">Capabilities</a><a href="../index.html#contact">Contact</a></nav>
+</div></header>
+<main id="main">
+<section class="case-hero"><div class="container">
+  <div class="breadcrumb"><a href="../index.html">Portfolio</a> / KOMO Xtreme XL CNC</div>
+  <div class="case-title">
+    <p class="eyebrow">Industrial Automation · CNC · Reliability</p>
+    <h1>KOMO Xtreme XL CNC</h1>
+    <p class="lead">Electrical, controls, motion and mechanical troubleshooting across a spindle overload fault, automatic tool-changer recovery and conveyor material-handling alignment.</p>
+    <div class="case-meta"><span class="tag">KEB VFD</span><span class="tag">3-Phase Power</span><span class="tag">CNC Controls</span><span class="tag">ATC</span><span class="tag">Root Cause Analysis</span></div>
+  </div>
+
+  <div class="case-intro-grid">
+    <div class="detail-card"><h3>My role</h3><p>Hands-on troubleshooting, fault isolation, corrective work, calibration and production validation in collaboration with the machine operator.</p></div>
+    <div class="detail-card"><h3>Engineering focus</h3><p>Treating the CNC as one integrated system: power, drive, spindle, controls, automatic tool changing and material handling.</p></div>
+  </div>
+
+  <div class="system-diagram">
+    <p class="eyebrow">System view</p>
+    <div class="flow">
+      <span class="node">3-Phase Supply</span><span class="arrow">→</span>
+      <span class="node">KEB Spindle VFD</span><span class="arrow">→</span>
+      <span class="node">Spindle & Cable Path</span><span class="arrow">↔</span>
+      <span class="node">CNC Control</span><span class="arrow">↔</span>
+      <span class="node">Tool Changer / Sensors</span><span class="arrow">↔</span>
+      <span class="node">Material Handling</span>
+    </div>
+  </div>
+</div></section>
+
+<section class="section"><div class="container">
+  <p class="eyebrow">Case 01</p><h2>Spindle overload: from alarm to physical root cause</h2>
+  <div class="case-list">
+    <article class="case-card"><h3>Initial condition</h3><div class="case-grid">
+      <div class="case-block"><strong>Fault</strong><span>The CNC stopped with <code>EX1041 TOOL 102 OVERLOAD FAULT</code>.</span></div>
+      <div class="case-block"><strong>First question</strong><span>Was the overload coming from the incoming power, the spindle drive, the motor path or a physical wiring problem?</span></div>
+    </div></article>
+    <article class="case-card"><h3>Troubleshooting sequence</h3><div class="case-grid">
+      <div class="case-block"><strong>Electrical verification</strong><span>Incoming three-phase supply was checked at approximately 463–464 VAC, confirming the supply was present and balanced enough to continue fault isolation.</span></div>
+      <div class="case-block"><strong>Safe inspection</strong><span>The spindle-drive circuit was isolated before deeper inspection of the VFD-to-spindle power path and machine cabling.</span></div>
+    </div></article>
+    <article class="case-card"><h3>Root cause & validation</h3><div class="case-grid">
+      <div class="case-block"><strong>Root cause</strong><span>A damaged, cracked and heat-affected spindle cable was identified in the cable-carrier area.</span></div>
+      <div class="case-block"><strong>Validation</strong><span>After the cable was replaced, the overload alarm cleared on restart and the machine completed a hardwood production test cycle under load.</span></div>
+    </div></article>
+  </div>
+  <div class="callout">The visible alarm described the condition; the physical cable inspection identified the failure.</div>
+</div></section>
+
+<section class="section section-alt"><div class="container">
+  <p class="eyebrow">Case 02</p><h2>Automatic tool changer collision recovery</h2>
+  <div class="case-list">
+    <article class="case-card"><div class="case-grid">
+      <div class="case-block"><strong>Problem</strong><span>A carousel collision damaged a tool-holder clamp and affected alignment relative to the spindle.</span></div>
+      <div class="case-block"><strong>Mechanical recovery</strong><span>Positioning and alignment were inspected and corrected before controls-side recovery.</span></div>
+      <div class="case-block"><strong>Calibration</strong><span>The carousel was recalibrated using the OEM-prescribed tool-changer recovery procedure.</span></div>
+      <div class="case-block"><strong>Validation</strong><span>Tool-change positioning and operation were verified before the machine returned to normal use.</span></div>
+    </div></article>
+  </div>
+  <div class="media-note">Public portfolio note: specific maintenance-mode bits, parameter values and detailed OEM service sequences are intentionally omitted.</div>
+</div></section>
+
+<section class="section"><div class="container">
+  <p class="eyebrow">Case 03</p><h2>Conveyor material-handling tracking & alignment</h2>
+  <div class="case-list">
+    <article class="case-card"><div class="case-grid">
+      <div class="case-block"><strong>Recurring issue</strong><span>Material handling gradually tracked toward one side after repeated operation.</span></div>
+      <div class="case-block"><strong>Inspection</strong><span>Frame/roller relationship, spacing, guides and material path were checked rather than treating it as a one-time belt adjustment.</span></div>
+      <div class="case-block"><strong>Correction</strong><span>Laser-assisted alignment, spacing correction and guide positioning were used to restore the required geometry.</span></div>
+      <div class="case-block"><strong>Result</strong><span>Consistent material movement was restored and the recurring drift was corrected.</span></div>
+    </div></article>
+  </div>
+</div></section>
+
+<section class="section section-alt"><div class="container">
+  <p class="eyebrow">Skills demonstrated</p><h2>One machine, multiple engineering disciplines</h2>
+  <div class="skill-cloud">
+    <span>Industrial Automation</span><span>CNC Systems</span><span>Electrical Troubleshooting</span><span>Three-Phase Power</span>
+    <span>VFD / Spindle Systems</span><span>CNC Controls</span><span>Root Cause Analysis</span><span>Automatic Tool Changers</span>
+    <span>Mechanical Alignment</span><span>Conveyor / Material Handling</span><span>Laser Alignment</span><span>Production Validation</span>
+  </div>
+  <div class="callout">Industrial equipment rarely fails within one discipline. The most useful troubleshooting comes from understanding how power, drives, controls, sensors, mechanics and software interact.</div>
+  <p class="small">This public case study intentionally excludes employer-confidential production data, customer information, internal files, network details and proprietary procedures.</p>
+  <div class="project-nav"><a href="../index.html#projects">← All projects</a><a href="concrete-printer.html">Next: Concrete Printer →</a></div>
+</div></section>
+</main>
+<footer class="site-footer"><div class="container footer-wrap"><span>Garry Bajwa · Engineering & Automation Portfolio</span><a class="external-link" href="https://www.linkedin.com/in/gurwinderjit-singh" target="_blank" rel="noreferrer">LinkedIn</a></div></footer>
+</body></html>
