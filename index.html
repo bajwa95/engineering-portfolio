@@ -27,27 +27,54 @@
 
   <main id="main">
     <section class="hero">
+      <div class="hero-circuit hero-circuit-a"></div>
+      <div class="hero-circuit hero-circuit-b"></div>
       <div class="container hero-grid">
-        <div>
+        <div class="hero-copy">
           <p class="eyebrow">Industrial Automation · Manufacturing Systems · Systems Integration</p>
-          <h1>I work across the boundaries between machines, controls, electronics and software.</h1>
+          <h1>I engineer the connection between machines, controls and software.</h1>
           <p class="lead">
-            My engineering work centers on understanding complete systems: how electrical power, drives,
-            sensors, mechanics, controls, networking and software interact—and how to find the real root cause
-            when something stops working.
+            My work combines electrical systems, automation, motion, electronics, manufacturing processes and software.
+            I focus on understanding the complete operating system, finding the real constraint or failure, and building a practical solution around it.
           </p>
+
           <div class="hero-actions">
-            <a class="button primary" href="#projects">View selected projects</a>
+            <a class="button primary" href="#projects">Explore projects</a>
             <a class="button secondary" href="https://www.linkedin.com/in/gurwinderjit-singh" target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
+
+          <div class="hero-specialties" aria-label="Engineering specialties">
+            <span><b>01</b> Automation & Controls</span>
+            <span><b>02</b> Manufacturing Systems</span>
+            <span><b>03</b> Software Integration</span>
+          </div>
         </div>
-        <aside class="hero-panel" aria-label="Core engineering themes">
-          <span>Automation & controls</span>
-          <span>CNC & motion systems</span>
-          <span>Electrical troubleshooting</span>
-          <span>Manufacturing systems</span>
-          <span>Embedded electronics</span>
-          <span>Python & industrial software</span>
+
+        <aside class="hero-visual" aria-label="Portfolio visual">
+          <div class="portrait-shell">
+            <div class="portrait-slot">
+              <div class="portrait-copy">
+                <strong>Portrait image</strong>
+                <small>Replace later with:</small>
+                <code>assets/profile/garry-bajwa.jpg</code>
+              </div>
+            </div>
+
+            <div class="floating-chip chip-1">CNC + Motion</div>
+            <div class="floating-chip chip-2">Controls</div>
+            <div class="floating-chip chip-3">Python</div>
+            <div class="floating-chip chip-4">Electronics</div>
+          </div>
+
+          <div class="systems-map">
+            <div class="map-title">SYSTEMS THINKING</div>
+            <div class="map-row">
+              <span>POWER</span><i></i><span>DRIVES</span><i></i><span>CONTROLS</span>
+            </div>
+            <div class="map-row">
+              <span>SENSORS</span><i></i><span>MECHANICS</span><i></i><span>SOFTWARE</span>
+            </div>
+          </div>
         </aside>
       </div>
     </section>
@@ -56,20 +83,26 @@
       <div class="container">
         <p class="eyebrow">Capabilities</p>
         <h2>Multidisciplinary by design</h2>
+        <p class="section-intro">I am most effective where several engineering domains meet and the solution depends on understanding how the complete system behaves.</p>
+
         <div class="capability-grid">
           <article class="capability-card">
+            <span class="card-number">01</span>
             <h3>Industrial automation</h3>
             <p>CNC systems, VFDs, sensors, motion, machine interfaces, automated tool changing, equipment recovery and production validation.</p>
           </article>
           <article class="capability-card">
+            <span class="card-number">02</span>
             <h3>Electrical & electronics</h3>
             <p>Three-phase troubleshooting, motor/drive systems, embedded controllers, instrumentation, signal tracing and practical field integration.</p>
           </article>
           <article class="capability-card">
+            <span class="card-number">03</span>
             <h3>Manufacturing systems</h3>
             <p>Production visibility, process analysis, reliability improvement, operator workflows, material handling and technical problem solving.</p>
           </article>
           <article class="capability-card">
+            <span class="card-number">04</span>
             <h3>Software integration</h3>
             <p>Python, Flask, Socket.IO, PyQt, Android, Raspberry Pi and networked tools that connect physical operations with usable digital systems.</p>
           </article>
@@ -81,13 +114,16 @@
       <div class="container">
         <p class="eyebrow">Selected engineering work</p>
         <h2>Projects & case studies</h2>
-        <p class="section-intro">Each case study focuses on the problem, the system-level reasoning, my contribution, the corrective action and how the result was validated.</p>
+        <p class="section-intro">Each project focuses on the problem, system-level reasoning, my contribution, corrective action and how the result was validated.</p>
 
         <div class="project-grid">
           <article class="project-card featured">
+            <div class="project-media project-media-komo">
+              <span>KOMO Xtreme XL CNC</span>
+              <small>assets/komo/overview.jpg</small>
+            </div>
             <div class="project-kicker">Industrial Automation · CNC · Reliability</div>
             <h3>KOMO Xtreme XL CNC</h3>
-            <img class="project-thumb" src="assets/komo/overview.jpg" alt="KOMO Xtreme XL CNC and material handling system">
             <p>Electrical, controls and mechanical troubleshooting across a spindle overload fault, automatic tool-changer recovery and conveyor material-handling alignment.</p>
             <div class="tag-row">
               <span>VFD</span><span>CNC</span><span>Electrical</span><span>Root Cause</span><span>Alignment</span>
@@ -96,6 +132,10 @@
           </article>
 
           <article class="project-card">
+            <div class="project-media project-media-concrete">
+              <span>Cable-Driven 3D Concrete Printer</span>
+              <small>assets/concrete-printer/overview.jpg</small>
+            </div>
             <div class="project-kicker">Motion Control · R&D · Systems Engineering</div>
             <h3>Cable-Driven Parallel 3D Concrete Printer</h3>
             <p>Large-scale cable-driven robotic platform integrating motion control, electronics, software, mechanical systems and camera-assisted positional feedback.</p>
@@ -106,6 +146,10 @@
           </article>
 
           <article class="project-card">
+            <div class="project-media project-media-robot">
+              <span>Autonomous Mobile Robot</span>
+              <small>assets/robot/overview.jpg</small>
+            </div>
             <div class="project-kicker">Robotics · LiDAR · Android</div>
             <h3>Food-Serving Mobile Robot</h3>
             <p>Android-based table selection and autonomous navigation integration using SLAMTEC LiDAR, mapping/localization and network communication.</p>
@@ -116,6 +160,10 @@
           </article>
 
           <article class="project-card">
+            <div class="project-media project-media-display">
+              <span>Centralized Display Platform</span>
+              <small>assets/display/overview.jpg</small>
+            </div>
             <div class="project-kicker">Industrial Software · Raspberry Pi · Networking</div>
             <h3>Centralized Multi-Screen Display Platform</h3>
             <p>A server-driven display system for distributing media to multiple screens with live status, heartbeats, remote refresh and Raspberry Pi clients.</p>
@@ -126,6 +174,10 @@
           </article>
 
           <article class="project-card">
+            <div class="project-media project-media-roadmoji">
+              <span>Roadmoji Vehicle Display</span>
+              <small>assets/roadmoji/overview.jpg</small>
+            </div>
             <div class="project-kicker">Embedded Systems · Human Interface · Prototype</div>
             <h3>Roadmoji Vehicle Display Controller</h3>
             <p>Raspberry Pi and Stream Deck prototype for physical-button control of a rear display, with media management, web upload and resilient startup behavior.</p>
@@ -138,7 +190,7 @@
       </div>
     </section>
 
-    <section id="approach" class="section">
+    <section id="approach" class="section approach-section">
       <div class="container approach-grid">
         <div>
           <p class="eyebrow">Engineering approach</p>
@@ -153,6 +205,10 @@
             I start by understanding the complete operating chain, verify assumptions with measurements and observation,
             isolate the failure, make the smallest practical correction, and validate the result under real operating conditions.
           </p>
+
+          <div class="approach-flow" aria-label="Engineering workflow">
+            <span>Observe</span><b>→</b><span>Measure</span><b>→</b><span>Isolate</span><b>→</b><span>Correct</span><b>→</b><span>Validate</span>
+          </div>
         </div>
       </div>
     </section>
@@ -174,7 +230,8 @@
       <div class="container contact-card">
         <div>
           <p class="eyebrow">Connect</p>
-          <h2>Interested in industrial automation, manufacturing systems or multidisciplinary engineering?</h2>
+          <h2>Industrial automation, manufacturing systems and multidisciplinary engineering.</h2>
+          <p>For roles and projects that sit between operations, machines, controls and software.</p>
         </div>
         <div class="contact-actions">
           <a class="button primary" href="https://www.linkedin.com/in/gurwinderjit-singh" target="_blank" rel="noreferrer">Connect on LinkedIn</a>
@@ -187,7 +244,7 @@
   <footer class="site-footer">
     <div class="container footer-wrap">
       <span>Garry Bajwa · Engineering & Automation Portfolio</span>
-      <span>Built as a lightweight static portfolio for GitHub Pages.</span>
+      <span>Automation · Systems · Electronics · Software</span>
     </div>
   </footer>
 </body>
