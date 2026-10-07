@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KOMO Xtreme XL CNC — Engineering Case Study</title>
+  <meta name="description" content="Sample engineering portfolio case-study page." />
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --panel:#121821;
+      --panel-2:#171f2a;
+      --text:#f3f6f9;
+      --muted:#aab6c5;
+      --line:#283443;
+      --accent:#7cc4ff;
+      --max:1120px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:linear-gradient(180deg,#091018 0%,var(--bg) 28%,#0a0e13 100%);
+      line-height:1.65;
+    }
+    a{color:var(--accent);text-decoration:none}
+    img{max-width:100%;display:block}
+    .wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+    .nav{
+      position:sticky;top:0;z-index:10;
+      backdrop-filter:blur(12px);
+      background:rgba(9,14,20,.82);
+      border-bottom:1px solid rgba(255,255,255,.07);
+    }
+    .nav .wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+    .brand{font-weight:750;letter-spacing:.02em}
+    .navlinks{display:flex;gap:18px;font-size:.92rem}
+    .hero{
+      padding:80px 0 58px;
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:54px;align-items:center;
+    }
+    .eyebrow{
+      color:var(--accent);font-size:.85rem;text-transform:uppercase;
+      letter-spacing:.13em;font-weight:700;margin-bottom:12px;
+    }
+    h1{font-size:clamp(2.6rem,5vw,5.2rem);line-height:.98;margin:0 0 18px}
+    .subtitle{font-size:clamp(1.1rem,2vw,1.5rem);color:#d7e2ed;max-width:720px}
+    .summary{color:var(--muted);max-width:720px;margin-top:18px}
+    .tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+    .tag{
+      border:1px solid var(--line);background:rgba(255,255,255,.025);
+      padding:7px 11px;border-radius:999px;font-size:.82rem;color:#d9e4ef
+    }
+    .hero-card{
+      min-height:430px;border-radius:22px;border:1px solid var(--line);
+      background:
+        radial-gradient(circle at 75% 20%,rgba(124,196,255,.18),transparent 30%),
+        linear-gradient(135deg,#17212d,#0f151d 70%);
+      display:flex;align-items:flex-end;padding:26px;overflow:hidden;
+      box-shadow:0 28px 70px rgba(0,0,0,.35)
+    }
+    .hero-card .placeholder{
+      width:100%;border:1px dashed #4f6275;border-radius:16px;
+      padding:22px;color:#98a7b8;background:rgba(0,0,0,.15)
+    }
+    section{padding:58px 0;border-top:1px solid rgba(255,255,255,.055)}
+    .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:28px}
+    h2{font-size:clamp(1.8rem,3vw,2.6rem);margin:0}
+    .lead{color:var(--muted);max-width:700px;margin:0}
+    .snapshot{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .card{
+      background:linear-gradient(180deg,var(--panel),#0f151c);
+      border:1px solid var(--line);border-radius:16px;padding:22px
+    }
+    .card h3{margin:0 0 10px;font-size:1.05rem}
+    .card p{margin:0;color:var(--muted);font-size:.94rem}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .flow{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:22px}
+    .step{
+      padding:10px 13px;border-radius:10px;border:1px solid var(--line);
+      background:var(--panel-2);font-size:.9rem
+    }
+    .arrow{color:#698097}
+    .case{
+      margin-top:22px;padding:26px;border-radius:18px;
+      border:1px solid var(--line);background:rgba(255,255,255,.018)
+    }
+    .case h3{font-size:1.35rem;margin:0 0 16px}
+    .case-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .case-block strong{display:block;margin-bottom:5px;color:#dfe9f3}
+    .case-block span{color:var(--muted)}
+    .skills{display:flex;flex-wrap:wrap;gap:10px}
+    .skill{
+      background:#111923;border:1px solid #2b3a4a;border-radius:10px;
+      padding:10px 12px;font-size:.9rem
+    }
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .media{
+      aspect-ratio:4/3;border-radius:15px;border:1px solid var(--line);
+      background:linear-gradient(145deg,#192431,#111821);
+      display:flex;align-items:flex-end;padding:16px;color:#b6c4d2;
+      font-size:.9rem
+    }
+    .result{
+      padding:28px;border:1px solid #35516b;border-radius:18px;
+      background:linear-gradient(135deg,rgba(124,196,255,.09),rgba(255,255,255,.015))
+    }
+    .result strong{font-size:1.15rem}
+    footer{padding:36px 0 54px;color:#7f8c99;font-size:.88rem}
+    @media(max-width:900px){
+      .hero,.two,.case-grid{grid-template-columns:1fr}
+      .snapshot{grid-template-columns:1fr 1fr}
+      .hero{padding-top:48px}
+      .hero-card{min-height:320px}
+      .gallery{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:600px){
+      .navlinks{display:none}
+      .snapshot,.gallery{grid-template-columns:1fr}
+      .wrap{width:min(var(--max),calc(100% - 28px))}
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="wrap">
+      <div class="brand">Garry · Engineering Portfolio</div>
+      <div class="navlinks">
+        <a href="#overview">Overview</a>
+        <a href="#cases">Cases</a>
+        <a href="#skills">Skills</a>
+        <a href="#media">Media</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Industrial Automation · CNC · Reliability</div>
+        <h1>KOMO Xtreme XL CNC</h1>
+        <div class="subtitle">Electrical, Controls, Automation & Reliability Troubleshooting</div>
+        <p class="summary">
+          Multidisciplinary troubleshooting across spindle drives, CNC controls,
+          automatic tool changing and material-handling systems.
+        </p>
+        <div class="tags">
+          <span class="tag">Production Equipment</span>
+          <span class="tag">Systems Integration</span>
+          <span class="tag">Root Cause Analysis</span>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="placeholder">
+          Replace this panel with your strongest KOMO machine photo.<br>
+          Recommended: overall machine + material-handling system.
+        </div>
+      </div>
+    </section>
+
+    <section id="overview">
+      <div class="section-head">
+        <div><div class="eyebrow">Engineering Snapshot</div><h2>What the work involved</h2></div>
+        <p class="lead">A quick overview for recruiters, followed by the deeper technical story.</p>
+      </div>
+
+      <div class="snapshot">
+        <div class="card"><h3>Challenge</h3><p>Multiple reliability issues across spindle, tool-changing and material-handling subsystems.</p></div>
+        <div class="card"><h3>My Role</h3><p>Hands-on diagnosis, fault isolation, corrective work, calibration and validation with the machine operator.</p></div>
+        <div class="card"><h3>Systems Involved</h3><p>3-phase power, KEB VFD, FANUC-based controls, automatic tool changer, mechanical alignment and conveyor systems.</p></div>
+        <div class="card"><h3>Outcome</h3><p>Faults isolated, systems recovered and machine operation validated under real operating conditions.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div><div class="eyebrow">System View</div><h2>Troubleshooting the complete machine</h2></div>
+      </div>
+
+      <div class="two">
+        <div class="card">
+          <h3>Engineering approach</h3>
+          <p>
+            Industrial equipment rarely fails inside the boundary of one discipline.
+            Alarms may appear in software while the actual cause is electrical,
+            mechanical, sensing, motion or control related.
+          </p>
+        </div>
+        <div class="card">
+          <h3>System path</h3>
+          <div class="flow">
+            <span class="step">3-Phase Supply</span><span class="arrow">→</span>
+            <span class="step">KEB VFD</span><span class="arrow">→</span>
+            <span class="step">Spindle</span><span class="arrow">↔</span>
+            <span class="step">CNC Control</span><span class="arrow">↔</span>
+            <span class="step">ATC / Sensors</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cases">
+      <div class="section-head">
+        <div><div class="eyebrow">Technical Story</div><h2>Engineering cases</h2></div>
+        <p class="lead">Problem → investigation → root cause → corrective action → validation.</p>
+      </div>
+
+      <article class="case">
+        <h3>01 — Spindle Overload Fault</h3>
+        <div class="case-grid">
+          <div class="case-block"><strong>Problem</strong><span>CNC stopped with EX1041 TOOL 102 OVERLOAD FAULT.</span></div>
+          <div class="case-block"><strong>Investigation</strong><span>Verified incoming three-phase supply at approximately 463–464 VAC, then traced the spindle-drive power path.</span></div>
+          <div class="case-block"><strong>Root Cause</strong><span>Damaged, cracked and heat-affected spindle cable found in the cable-carrier area.</span></div>
+          <div class="case-block"><strong>Validation</strong><span>Alarm cleared after correction and the machine completed a hardwood cutting test under load.</span></div>
+        </div>
+      </article>
+
+      <article class="case">
+        <h3>02 — Automatic Tool Changer Collision Recovery</h3>
+        <div class="case-grid">
+          <div class="case-block"><strong>Problem</strong><span>Carousel collision damaged a tool-holder clamp and affected alignment relative to the spindle.</span></div>
+          <div class="case-block"><strong>Correction</strong><span>Mechanical alignment was restored, then the OEM-prescribed recovery/calibration procedure was followed.</span></div>
+          <div class="case-block"><strong>Validation</strong><span>Tool-change positioning and operation were checked before return to normal use.</span></div>
+          <div class="case-block"><strong>Lesson</strong><span>Mechanical correction alone was insufficient; control/calibration relationships also had to be restored.</span></div>
+        </div>
+      </article>
+
+      <article class="case">
+        <h3>03 — Conveyor / Material-Handling Alignment</h3>
+        <div class="case-grid">
+          <div class="case-block"><strong>Problem</strong><span>Material handling gradually tracked toward one side during operation.</span></div>
+          <div class="case-block"><strong>Investigation</strong><span>Inspected frame geometry, roller relationship, guides, spacing and material path.</span></div>
+          <div class="case-block"><strong>Correction</strong><span>Used laser-assisted alignment and spacing/guide corrections to restore geometry.</span></div>
+          <div class="case-block"><strong>Result</strong><span>Recurring tracking issue was corrected and consistent material movement restored.</span></div>
+        </div>
+      </article>
+    </section>
+
+    <section id="skills">
+      <div class="section-head">
+        <div><div class="eyebrow">Skills Demonstrated</div><h2>Capabilities evidenced by the work</h2></div>
+      </div>
+      <div class="skills">
+        <span class="skill">Industrial Automation</span>
+        <span class="skill">CNC Systems</span>
+        <span class="skill">Electrical Troubleshooting</span>
+        <span class="skill">Three-Phase Power</span>
+        <span class="skill">VFD / Spindle Systems</span>
+        <span class="skill">FANUC-based Controls</span>
+        <span class="skill">Root Cause Analysis</span>
+        <span class="skill">Automatic Tool Changers</span>
+        <span class="skill">Mechanical Alignment</span>
+        <span class="skill">Material Handling</span>
+        <span class="skill">Laser Alignment</span>
+        <span class="skill">Production Validation</span>
+      </div>
+    </section>
+
+    <section>
+      <div class="result">
+        <div class="eyebrow">Result & Validation</div>
+        <strong>Machine faults were corrected and validated through operational and production testing.</strong>
+        <p class="lead" style="margin-top:10px">
+          This sample intentionally avoids proprietary maintenance-mode details, internal parameters,
+          network information, customer data and production-specific information.
+        </p>
+      </div>
+    </section>
+
+    <section id="media">
+      <div class="section-head">
+        <div><div class="eyebrow">Project Media</div><h2>Evidence gallery</h2></div>
+        <p class="lead">Replace these placeholders with sanitized project photos and short technical captions.</p>
+      </div>
+
+      <div class="gallery">
+        <div class="media">Hero / overall machine photo</div>
+        <div class="media">CNC overload alarm</div>
+        <div class="media">Three-phase supply verification</div>
+        <div class="media">KEB spindle VFD</div>
+        <div class="media">Damaged spindle cable</div>
+        <div class="media">Tool changer / carousel</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      Sample static engineering case-study page for GitHub Pages.
+    </div>
+  </footer>
+</body>
+</html>
