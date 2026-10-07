@@ -676,3 +676,73 @@ h3{line-height:1.2}
   .project-section-meta{align-items:flex-start;flex-direction:column;gap:8px}
   .project-note{text-align:left}
 }
+
+
+/* Horizontal overflow hardening */
+html,body{
+  max-width:100%;
+  overflow-x:clip;
+}
+.container,
+.hero-grid,
+.about-grid,
+.capability-grid,
+.project-grid,
+.experience-layout,
+.credential-grid,
+.approach-grid,
+.mini-grid{
+  min-width:0;
+}
+.hero-copy,
+.hero-visual,
+.about-heading,
+.about-copy,
+.experience-intro,
+.timeline,
+.project-card,
+.capability-card,
+.credential-card,
+.contact-card > *{
+  min-width:0;
+}
+img,svg,video,canvas{
+  max-width:100%;
+}
+.project-grid{
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));
+}
+.project-card{
+  width:100%;
+  max-width:100%;
+}
+.project-kicker,
+.project-card h3,
+.project-card p,
+.project-media-copy,
+.timeline-content,
+.credential-card > div{
+  overflow-wrap:anywhere;
+}
+.nav{
+  min-width:0;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+}
+@media(max-width:980px){
+  .nav{display:none}
+}
+@media(max-width:700px){
+  .portrait-shell{
+    max-width:calc(100% - 16px);
+  }
+  .floating-chip{
+    max-width:42%;
+    white-space:normal;
+    text-align:center;
+  }
+  .chip-1{left:-8px}
+  .chip-2{right:-8px}
+  .chip-3{left:-6px}
+  .chip-4{right:-6px}
+}
