@@ -59,3 +59,21 @@ Replace the portfolio images later using these exact filenames so the existing l
 - `assets/roadmoji/web-console.jpg`
 
 Missing media files intentionally fall back to the site's engineering-themed gradient panels instead of breaking the layout.
+
+
+## Adding a project to the homepage
+
+The homepage project section is data-driven. To add a future project, edit only `projects-data.js` and add another project object with:
+
+- `title`
+- `mediaTitle`
+- `mediaSubtitle`
+- `kicker`
+- `description`
+- `tags`
+- `href`
+- `image`
+- `imageAlt`
+- `featured`
+
+`site.js` automatically creates the card, numbering, tags, project count, image fallback, and link. Featured projects are placed first automatically. No homepage HTML changes are required for normal project additions.
