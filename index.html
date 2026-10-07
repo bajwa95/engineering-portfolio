@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Engineering portfolio focused on industrial automation, manufacturing systems, controls, electronics, software integration, and multidisciplinary troubleshooting." />
+  <meta name="description" content="Garry Bajwa's engineering portfolio focused on industrial automation, manufacturing systems, controls, electronics, software integration and multidisciplinary troubleshooting." />
   <title>Garry Bajwa | Engineering & Automation Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -17,9 +17,10 @@
         <span>Garry Bajwa</span>
       </a>
       <nav class="nav" aria-label="Primary navigation">
-        <a href="#capabilities">Capabilities</a>
+        <a href="#about">About</a>
         <a href="#projects">Projects</a>
-        <a href="#approach">Approach</a>
+        <a href="#experience">Experience</a>
+        <a href="#credentials">Credentials</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -54,9 +55,8 @@
           <div class="portrait-shell">
             <div class="portrait-slot">
               <div class="portrait-copy">
-                <strong>Portrait image</strong>
-                <small>Replace later with:</small>
-                <code>assets/profile/garry-bajwa.jpg</code>
+                <strong>Garry Bajwa</strong>
+                <small>Engineering · Automation · Manufacturing Systems</small>
               </div>
             </div>
 
@@ -79,7 +79,37 @@
       </div>
     </section>
 
-    <section id="capabilities" class="section">
+    <section id="about" class="section about-section">
+      <div class="container about-grid">
+        <div class="about-heading">
+          <p class="eyebrow">About</p>
+          <h2>Engineering from the production floor to the software layer.</h2>
+          <div class="about-rail" aria-hidden="true">
+            <span>Electrical</span><i></i><span>Controls</span><i></i><span>Mechanical</span><i></i><span>Software</span>
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <p class="about-lead">
+            My background spans manufacturing operations, equipment reliability, industrial automation, electronics and custom software.
+            That mix has shaped how I solve problems: I rarely look at a machine, workflow or system through only one discipline.
+          </p>
+          <p>
+            I have led maintenance and plant responsibilities, supported CNC and automated equipment, built production and workflow software,
+            integrated sensors and embedded hardware, and contributed to robotics and motion-control projects. I am most interested in work where
+            physical systems and digital systems meet.
+          </p>
+
+          <div class="about-pillars">
+            <div><strong>Diagnose</strong><span>Trace the actual failure path instead of stopping at the alarm.</span></div>
+            <div><strong>Integrate</strong><span>Connect machines, controls, electronics, networks and software into one usable system.</span></div>
+            <div><strong>Improve</strong><span>Turn recurring operating problems into more reliable processes and tools.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="capabilities" class="section section-soft">
       <div class="container">
         <p class="eyebrow">Capabilities</p>
         <h2>Multidisciplinary by design</h2>
@@ -110,21 +140,26 @@
       </div>
     </section>
 
-    <section id="projects" class="section section-alt">
+    <section id="projects" class="section projects-section">
       <div class="container">
-        <p class="eyebrow">Selected engineering work</p>
-        <h2>Projects & case studies</h2>
-        <p class="section-intro">Each project focuses on the problem, system-level reasoning, my contribution, corrective action and how the result was validated.</p>
+        <div class="section-heading-row">
+          <div>
+            <p class="eyebrow">Selected engineering work</p>
+            <h2>Projects & case studies</h2>
+          </div>
+          <p class="section-intro">Problem → reasoning → implementation → validation.</p>
+        </div>
 
         <div class="project-grid">
           <article class="project-card featured">
             <div class="project-media project-media-komo">
+              <div class="media-index">01</div>
               <span>KOMO Xtreme XL CNC</span>
-              <small>assets/komo/overview.jpg</small>
+              <small>Industrial automation · CNC · reliability</small>
             </div>
-            <div class="project-kicker">Industrial Automation · CNC · Reliability</div>
+            <div class="project-kicker">Electrical · Controls · Mechanical Recovery</div>
             <h3>KOMO Xtreme XL CNC</h3>
-            <p>Electrical, controls and mechanical troubleshooting across a spindle overload fault, automatic tool-changer recovery and conveyor material-handling alignment.</p>
+            <p>Spindle overload troubleshooting, automatic tool-changer recovery and conveyor material-handling alignment on a production CNC system.</p>
             <div class="tag-row">
               <span>VFD</span><span>CNC</span><span>Electrical</span><span>Root Cause</span><span>Alignment</span>
             </div>
@@ -133,8 +168,9 @@
 
           <article class="project-card">
             <div class="project-media project-media-concrete">
+              <div class="media-index">02</div>
               <span>Cable-Driven 3D Concrete Printer</span>
-              <small>assets/concrete-printer/overview.jpg</small>
+              <small>Motion control · electronics · R&D</small>
             </div>
             <div class="project-kicker">Motion Control · R&D · Systems Engineering</div>
             <h3>Cable-Driven Parallel 3D Concrete Printer</h3>
@@ -147,12 +183,13 @@
 
           <article class="project-card">
             <div class="project-media project-media-robot">
+              <div class="media-index">03</div>
               <span>Autonomous Mobile Robot</span>
-              <small>assets/robot/overview.jpg</small>
+              <small>LiDAR · navigation · Android integration</small>
             </div>
             <div class="project-kicker">Robotics · LiDAR · Android</div>
             <h3>Food-Serving Mobile Robot</h3>
-            <p>Android-based table selection and autonomous navigation integration using SLAMTEC LiDAR, mapping/localization and network communication.</p>
+            <p>Android-based destination selection integrated with SLAMTEC LiDAR, mapping/localization and autonomous navigation.</p>
             <div class="tag-row">
               <span>LiDAR</span><span>SLAM</span><span>Android</span><span>TCP/IP</span><span>Robotics</span>
             </div>
@@ -161,8 +198,9 @@
 
           <article class="project-card">
             <div class="project-media project-media-display">
+              <div class="media-index">04</div>
               <span>Centralized Display Platform</span>
-              <small>assets/display/overview.jpg</small>
+              <small>Python · Raspberry Pi · networking</small>
             </div>
             <div class="project-kicker">Industrial Software · Raspberry Pi · Networking</div>
             <h3>Centralized Multi-Screen Display Platform</h3>
@@ -175,16 +213,120 @@
 
           <article class="project-card">
             <div class="project-media project-media-roadmoji">
+              <div class="media-index">05</div>
               <span>Roadmoji Vehicle Display</span>
-              <small>assets/roadmoji/overview.jpg</small>
+              <small>Embedded Linux · human interface · prototype</small>
             </div>
             <div class="project-kicker">Embedded Systems · Human Interface · Prototype</div>
             <h3>Roadmoji Vehicle Display Controller</h3>
-            <p>Raspberry Pi and Stream Deck prototype for physical-button control of a rear display, with media management, web upload and resilient startup behavior.</p>
+            <p>Raspberry Pi and Stream Deck prototype for physical-button control of a rear display, with media management and a web console.</p>
             <div class="tag-row">
               <span>Raspberry Pi</span><span>Python</span><span>PyQt</span><span>Flask</span><span>USB HID</span>
             </div>
             <a class="text-link" href="projects/roadmoji.html">Read full case study →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section experience-section">
+      <div class="container experience-layout">
+        <div class="experience-intro">
+          <p class="eyebrow">Selected experience</p>
+          <h2>Progression from hands-on equipment work to systems and automation leadership.</h2>
+          <p>
+            My career has stayed close to real production systems while expanding into automation, digital tools, process improvement and technical leadership.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-year">2024–2026</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Van Gogh Designs</h3>
+              <p class="timeline-role">Systems, Automation & Maintenance Manager · Plant & Maintenance Manager · Maintenance Supervisor</p>
+              <p>Manufacturing systems, equipment reliability, CNC support, production visibility, custom software, automation projects and cross-functional plant support.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-year">2022–2024</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Tenari Energy Management Services</h3>
+              <p class="timeline-role">Engineering project work · Cable-Driven 3D Concrete Printer</p>
+              <p>Electronics, wiring, motion-control integration, HMI work, camera-assisted feedback, testing and multidisciplinary troubleshooting.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-year">2021–2022</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Signhub</h3>
+              <p class="timeline-role">Production Engineer / Production Supervision</p>
+              <p>CNC routing, CO₂ laser, UV/large-format printing, LED systems, fabrication workflows and production coordination.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-year">2019–2021</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Electronics & Manufacturing Foundation</h3>
+              <p class="timeline-role">Bajwa Smart Tech · Avigilon / Motorola Solutions</p>
+              <p>Electronics, embedded systems, PCB/SMT manufacturing exposure, ESD/5S discipline and hands-on production work.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="credentials" class="section credentials-section">
+      <div class="container">
+        <p class="eyebrow">Education & credentials</p>
+        <h2>Technical foundation + continuous learning</h2>
+
+        <div class="credential-grid">
+          <article class="credential-card credential-featured">
+            <div class="credential-icon">AC</div>
+            <div>
+              <span class="credential-type">In progress</span>
+              <h3>Automated Controls Installation & Maintenance — Advanced Certificate</h3>
+              <p>British Columbia Institute of Technology</p>
+              <small>PLC · HMI · Drives & Motion · Fieldbus · SCADA · Sensors & Instrumentation · Process Control</small>
+            </div>
+          </article>
+
+          <article class="credential-card">
+            <div class="credential-icon">BTech</div>
+            <div>
+              <span class="credential-type">Engineering</span>
+              <h3>B.Tech — Electronics & Communication Engineering</h3>
+              <p>Punjabi University Patiala</p>
+              <small>Electronics · communication systems · instrumentation · engineering fundamentals</small>
+            </div>
+          </article>
+
+          <article class="credential-card">
+            <div class="credential-icon">IBM</div>
+            <div>
+              <span class="credential-type">Business</span>
+              <h3>International Business Management</h3>
+              <p>St. Lawrence College</p>
+              <small>Business operations · communication · management perspective</small>
+            </div>
+          </article>
+
+          <article class="credential-card">
+            <div class="credential-icon">LSS</div>
+            <div>
+              <span class="credential-type">Continuous improvement</span>
+              <h3>Lean Six Sigma White Belt</h3>
+              <p>Process improvement foundation</p>
+              <small>Structured problem solving · waste reduction · process thinking</small>
+            </div>
           </article>
         </div>
       </div>
@@ -213,7 +355,7 @@
       </div>
     </section>
 
-    <section class="section section-alt">
+    <section class="section section-soft">
       <div class="container">
         <p class="eyebrow">Additional technical work</p>
         <h2>Broader hands-on experience</h2>
