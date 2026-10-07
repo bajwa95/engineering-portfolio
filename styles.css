@@ -1086,3 +1086,110 @@ body.lightbox-open{
     max-height:82vh;
   }
 }
+
+
+/* Project image lightbox */
+.project-lightbox-trigger{
+  cursor:zoom-in;
+}
+.project-lightbox-trigger:focus-visible{
+  outline:3px solid rgba(18,104,213,.34);
+  outline-offset:3px;
+}
+body.project-lightbox-open{
+  overflow:hidden;
+}
+.project-lightbox{
+  position:fixed;
+  inset:0;
+  z-index:10000;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:3%;
+  background:rgba(7,20,32,.93);
+  backdrop-filter:blur(8px);
+}
+.project-lightbox.is-open{
+  display:flex;
+}
+.project-lightbox-figure{
+  margin:0;
+  max-width:92vw;
+  max-height:92vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:12px;
+}
+.project-lightbox-image{
+  display:block;
+  width:auto;
+  height:auto;
+  max-width:92vw;
+  max-height:84vh;
+  object-fit:contain;
+  border-radius:12px;
+  box-shadow:0 24px 70px rgba(0,0,0,.38);
+}
+.project-lightbox-caption{
+  max-width:780px;
+  color:rgba(255,255,255,.84);
+  text-align:center;
+  font-size:.9rem;
+}
+.project-lightbox-close,
+.project-lightbox-nav{
+  position:absolute;
+  border:1px solid rgba(255,255,255,.22);
+  background:rgba(255,255,255,.10);
+  color:#fff;
+  cursor:pointer;
+  backdrop-filter:blur(10px);
+}
+.project-lightbox-close{
+  top:22px;
+  right:24px;
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  font-size:2rem;
+  line-height:1;
+}
+.project-lightbox-nav{
+  top:50%;
+  transform:translateY(-50%);
+  width:48px;
+  height:64px;
+  border-radius:14px;
+  font-size:2.6rem;
+  line-height:1;
+}
+.project-lightbox-prev{left:24px}
+.project-lightbox-next{right:24px}
+.project-lightbox-close:hover,
+.project-lightbox-nav:hover{
+  background:rgba(255,255,255,.18);
+}
+@media(max-width:650px){
+  .project-lightbox{
+    padding:2%;
+  }
+  .project-lightbox-image{
+    max-width:96vw;
+    max-height:82vh;
+  }
+  .project-lightbox-nav{
+    width:40px;
+    height:52px;
+    font-size:2rem;
+  }
+  .project-lightbox-prev{left:8px}
+  .project-lightbox-next{right:8px}
+  .project-lightbox-close{
+    top:10px;
+    right:10px;
+    width:42px;
+    height:42px;
+  }
+}
