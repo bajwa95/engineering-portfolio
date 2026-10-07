@@ -24,7 +24,7 @@ This repository is designed as a dependency-free static site. GitHub Pages can s
 Replace the portfolio images later using these exact filenames so the existing layout updates automatically:
 
 ### Profile
-- `assets/profile/garry-bajwa.jpg`
+- `assets/profile/garry-bajwa2.jpg`
 
 ### KOMO Xtreme XL
 - `assets/komo/overview.jpg`
