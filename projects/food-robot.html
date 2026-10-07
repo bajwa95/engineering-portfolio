@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Food-serving mobile robot integration using Android control, SLAMTEC LiDAR, autonomous navigation and Ethernet/IP communication.">
+<title>Food-Serving Mobile Robot | Garry Bajwa</title><link rel="stylesheet" href="../styles.css"></head>
+<body>
+<header class="site-header"><div class="container nav-wrap"><a class="brand" href="../index.html"><span class="brand-mark">GB</span><span>Garry Bajwa</span></a><nav class="nav"><a href="../index.html#projects">Projects</a><a href="../index.html#contact">Contact</a></nav></div></header>
+<main>
+<section class="case-hero"><div class="container">
+<div class="breadcrumb"><a href="../index.html">Portfolio</a> / Food-Serving Mobile Robot</div>
+<div class="case-title"><p class="eyebrow">Robotics · LiDAR · Android Integration</p><h1>Food-Serving Mobile Robot</h1>
+<p class="lead">Android destination selection integrated with a SLAMTEC navigation stack so a user could choose a table and send the robot to that location autonomously.</p>
+<div class="case-meta"><span class="tag">LiDAR</span><span class="tag">SLAM</span><span class="tag">Android</span><span class="tag">Ethernet / IP</span><span class="tag">Wheel Encoders</span></div></div>
+
+<div class="case-intro-grid">
+  <div class="detail-card"><h3>My contribution</h3><p>Developed the Android-side interface and communication integration used to send selected table destinations into the robot navigation workflow.</p></div>
+  <div class="detail-card"><h3>System behavior</h3><p>The operator selected a table on the Android interface and the mobile platform used its existing mapping/localization/navigation stack to travel autonomously.</p></div>
+</div>
+<div class="system-diagram"><p class="eyebrow">Data flow</p><div class="flow">
+  <span class="node">Android Table Selection</span><span class="arrow">→</span><span class="node">Ethernet / IP Communication</span><span class="arrow">→</span>
+  <span class="node">SLAMTEC Navigation</span><span class="arrow">→</span><span class="node">LiDAR + Encoders</span><span class="arrow">→</span><span class="node">Autonomous Motion</span>
+</div></div>
+</div></section>
+
+<section class="section"><div class="container">
+<p class="eyebrow">Integration problem</p><h2>Turning a navigation platform into a simple user workflow</h2>
+<p class="section-intro">The technical value was not just autonomous navigation. The goal was to bridge the navigation hardware/software with a practical table-selection interface a user could operate directly.</p>
+<div class="case-list">
+  <article class="case-card"><h3>Interface</h3><div class="case-grid">
+    <div class="case-block"><strong>User action</strong><span>Select the destination table in the Android application.</span></div>
+    <div class="case-block"><strong>Command handoff</strong><span>The application communicated the selected destination to the robot over the network using the SLAMTEC integration path.</span></div>
+  </div></article>
+  <article class="case-card"><h3>Autonomous navigation</h3><div class="case-grid">
+    <div class="case-block"><strong>Localization</strong><span>LiDAR mapping/localization and wheel-encoder feedback supported awareness of the robot’s position within the mapped environment.</span></div>
+    <div class="case-block"><strong>Movement</strong><span>The platform then planned and executed the route to the selected destination without manual driving.</span></div>
+  </div></article>
+</div>
+<div class="skill-cloud"><span>Mobile Robotics</span><span>Android</span><span>LiDAR</span><span>SLAM</span><span>Network Integration</span><span>System Integration</span><span>Autonomous Navigation</span></div>
+<div class="project-nav"><a href="concrete-printer.html">← Concrete Printer</a><a href="display-platform.html">Next: Display Platform →</a></div>
+</div></section>
+</main>
+<footer class="site-footer"><div class="container footer-wrap"><span>Garry Bajwa · Engineering & Automation Portfolio</span><a class="external-link" href="https://www.linkedin.com/in/gurwinderjit-singh" target="_blank" rel="noreferrer">LinkedIn</a></div></footer>
+</body></html>
