@@ -17,3 +17,45 @@ The site intentionally uses no employer-confidential source files, production da
 ## GitHub Pages
 
 This repository is designed as a dependency-free static site. GitHub Pages can serve it directly from the `main` branch / root folder.
+
+
+## Media replacement map
+
+Replace the portfolio images later using these exact filenames so the existing layout updates automatically:
+
+### Profile
+- `assets/profile/garry-bajwa.jpg`
+
+### KOMO Xtreme XL
+- `assets/komo/overview.jpg`
+- `assets/komo/alarm.jpg`
+- `assets/komo/damaged-cable.jpg`
+- `assets/komo/tool-carousel.jpg`
+- `assets/komo/conveyor.jpg`
+
+### Cable-Driven 3D Concrete Printer
+- `assets/concrete-printer/overview.jpg`
+- `assets/concrete-printer/tower-system.jpg`
+- `assets/concrete-printer/controller-electronics.jpg`
+- `assets/concrete-printer/extruder.jpg`
+- `assets/concrete-printer/printed-result.jpg`
+
+### Food-Serving Mobile Robot
+- `assets/robot/overview.jpg`
+- `assets/robot/android-control.jpg`
+- `assets/robot/lidar-mapping.jpg`
+- `assets/robot/navigation-demo.jpg`
+
+### Centralized Display Platform
+- `assets/display/overview.jpg`
+- `assets/display/display-manager.jpg`
+- `assets/display/server-control.jpg`
+- `assets/display/led-display.jpg`
+
+### Roadmoji
+- `assets/roadmoji/overview.jpg`
+- `assets/roadmoji/streamdeck-controller.jpg`
+- `assets/roadmoji/rear-display.jpg`
+- `assets/roadmoji/web-console.jpg`
+
+Missing media files intentionally fall back to the site's engineering-themed gradient panels instead of breaking the layout.
