@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Forklift-mounted workstation power integration case study: replacing short-runtime UPS units with a fused DC-DC power solution for a thermal printer and Windows tablet computer.">
+  <title>Forklift Workstation Power Integration | Garry Bajwa</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container nav-wrap">
+  <a class="brand" href="../index.html"><span class="brand-mark">GB</span><span>Garry Bajwa</span></a>
+  <nav class="nav"><a href="../index.html#projects">Projects</a><a href="#problem">Problem</a><a href="#design">Design</a><a href="#validation">Validation</a></nav>
+</div></header>
+
+<main id="main">
+<section class="case-hero"><div class="container">
+  <div class="breadcrumb"><a href="../index.html">Portfolio</a> / Forklift Workstation Power Integration</div>
+  <div class="case-title">
+    <p class="eyebrow">Industrial Power Integration · Mobile Computing · Reliability</p>
+    <h1>Forklift-Mounted Workstation Power Integration</h1>
+    <p class="lead">Replaced a short-runtime UPS arrangement with a direct, fused DC power system that allowed a forklift-mounted thermal label printer and Windows tablet computer to operate throughout the shift without UPS recharge cycles.</p>
+    <div class="case-meta"><span class="tag">32 VDC</span><span class="tag">DC-DC Converter</span><span class="tag">24 V Printer</span><span class="tag">20 V Computer</span><span class="tag">Current Control</span></div>
+  </div>
+
+  <div class="case-cover" style="background-image:linear-gradient(180deg,rgba(8,42,70,.03),rgba(8,42,70,.78)),url('../assets/forklift-workstation/finlintegrationworking.jpg'),linear-gradient(135deg,#9ed8f5,#5db8b5);">
+    <div class="case-cover-copy"><strong>Final integrated forklift workstation</strong><span>A mobile computing and label-printing station powered from the forklift electrical system rather than relying on swappable UPS units.</span></div>
+  </div>
+
+  <div class="case-intro-grid">
+    <div class="detail-card"><h3>Original limitation</h3><p>The UPS provided roughly two hours of runtime during an eight-hour shift, requiring repeated charging and spare units to keep the workstation operating.</p></div>
+    <div class="detail-card"><h3>My role</h3><p>Power-system concept, component selection, DC conversion, fused distribution, switched integration, commissioning and current-limit troubleshooting.</p></div>
+  </div>
+</div></section>
+
+<section id="problem" class="section"><div class="container">
+  <p class="eyebrow">01 · Operating problem</p><h2>A temporary backup device had become the permanent power strategy</h2>
+  <div class="case-list">
+    <article class="case-card"><div class="case-grid">
+      <div class="case-block"><strong>Workstation loads</strong><span>A 24 V / 3 A thermal label printer and a 20 V / 2.5 A tablet-style Windows computer were mounted on the forklift.</span></div>
+      <div class="case-block"><strong>UPS runtime</strong><span>Each UPS supplied about two hours of backup, far shorter than the eight-hour operating shift.</span></div>
+      <div class="case-block"><strong>Operational workaround</strong><span>To avoid downtime, each workstation needed one UPS on the forklift and another available while charging.</span></div>
+      <div class="case-block"><strong>Cost pressure</strong><span>Each UPS cost about $1,200. With three forklift setups and two UPS units per setup, the workaround was expensive as well as operationally awkward.</span></div>
+    </div></article>
+  </div>
+  <div class="photo-grid">
+    <figure class="photo-card"><img src="../assets/forklift-workstation/oldwayfullpic.jpg" alt="Original forklift workstation using a UPS"><figcaption><strong>Original arrangement</strong>The workstation before the direct forklift-power integration.</figcaption></figure>
+    <figure class="photo-card"><img src="../assets/forklift-workstation/oldwayusingups.jpg" alt="UPS powering the original forklift workstation"><figcaption><strong>UPS-dependent operation</strong>The previous approach required rechargeable backup units to keep the workstation operating.</figcaption></figure>
+  </div>
+</div></section>
+
+<section id="design" class="section section-alt"><div class="container">
+  <p class="eyebrow">02 · Power-system redesign</p><h2>Use the forklift as the energy source, then condition and protect the loads</h2>
+  <div class="system-diagram">
+    <div class="flow"><span class="node">32 V Forklift Battery</span><span class="arrow">→</span><span class="node">Key-Switched Supply</span><span class="arrow">→</span><span class="node">Manual Toggle</span><span class="arrow">→</span><span class="node">20 A DC-DC Conversion</span><span class="arrow">→</span><span class="node">Fused Loads</span></div>
+  </div>
+  <div class="case-list">
+    <article class="case-card"><div class="case-grid">
+      <div class="case-block"><strong>Source</strong><span>The forklift electrical system provided approximately 32 VDC.</span></div>
+      <div class="case-block"><strong>Conversion</strong><span>A 20 A DC-DC converter was used as the core of the regulated power solution.</span></div>
+      <div class="case-block"><strong>Protection</strong><span>Separate fusing was added for the connected equipment, and the converter included adjustable current control.</span></div>
+      <div class="case-block"><strong>Operator control</strong><span>The system was enabled with the forklift key and also included a separate on/off toggle switch.</span></div>
+    </div></article>
+  </div>
+  <div class="callout">Parts cost for the replacement power solution was approximately $110 per setup, compared with roughly $2,400 in UPS hardware required to keep one workstation continuously supported with one unit in service and one charging.</div>
+</div></section>
+
+<section id="validation" class="section"><div class="container">
+  <p class="eyebrow">03 · Commissioning & troubleshooting</p><h2>Field testing exposed the final adjustment</h2>
+  <div class="case-list">
+    <article class="case-card"><div class="case-grid">
+      <div class="case-block"><strong>Initial result</strong><span>The computer and printer powered correctly from the forklift system, eliminating the need for UPS swapping and recharge cycles.</span></div>
+      <div class="case-block"><strong>Observed issue</strong><span>The thermal printer occasionally produced faded labels even though the workstation remained powered.</span></div>
+      <div class="case-block"><strong>Diagnosis</strong><span>The printer drew more current during active printing than during idle operation, so the converter's current setting was limiting peak demand.</span></div>
+      <div class="case-block"><strong>Correction</strong><span>After the current setting was adjusted, print quality stabilized and the workstation operated correctly through the shift.</span></div>
+    </div></article>
+  </div>
+  <div class="photo-grid">
+    <figure class="photo-card"><img src="../assets/forklift-workstation/finlintegrationworking.jpg" alt="Completed forklift workstation power integration"><figcaption><strong>Integrated system</strong>Completed installation with the workstation powered from the forklift electrical system.</figcaption></figure>
+    <figure class="photo-card"><img src="../assets/forklift-workstation/finalworking.jpg" alt="Forklift workstation operating after power conversion retrofit"><figcaption><strong>Working result</strong>Final operating setup after current-limit adjustment and validation.</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="section section-alt"><div class="container">
+  <p class="eyebrow">Engineering takeaway</p><h2>Replace a recurring workaround with a system-level solution</h2>
+  <div class="skill-cloud"><span>DC Power Systems</span><span>DC-DC Conversion</span><span>Electrical Troubleshooting</span><span>Current Limiting</span><span>Fuse Protection</span><span>Mobile Computing</span><span>Thermal Printing</span><span>Reliability Improvement</span><span>Cost Reduction</span><span>Field Commissioning</span></div>
+  <div class="callout">The value of the project was not only lower hardware cost. It removed a recurring charging/swapping workflow and turned the workstation into a continuously available part of the forklift.</div>
+  <div class="project-nav"><a href="../index.html#projects">← All projects</a><a href="gate-sensor-retrofit.html">Gate Sensor Retrofit →</a></div>
+</div></section>
+</main>
+<footer class="site-footer"><div class="container footer-wrap"><span>Garry Bajwa · Engineering & Automation Portfolio</span><a class="external-link" href="../field-notes.html">Engineering Field Notes</a></div></footer>
+</body></html>
