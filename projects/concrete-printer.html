@@ -1,118 +1,198 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Cable-driven parallel 3D concrete printer engineering case study integrating motion control, electronics, HMI, computer vision and mechanical systems.">
-<title>Cable-Driven 3D Concrete Printer | Garry Bajwa</title><link rel="stylesheet" href="../styles.css"></head>
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Cable-driven parallel 3D concrete printer engineering case study covering motion-control hardware, spool development, extrusion hardware, operator controls and concrete-print validation.">
+  <title>Cable-Driven 3D Concrete Printer | Garry Bajwa</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
 <body>
-<header class="site-header"><div class="container nav-wrap"><a class="brand" href="../index.html"><span class="brand-mark">GB</span><span>Garry Bajwa</span></a><nav class="nav"><a href="../index.html#projects">Projects</a><a href="../index.html#contact">Contact</a></nav></div></header>
-<main>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container nav-wrap">
+  <a class="brand" href="../index.html"><span class="brand-mark">GB</span><span>Garry Bajwa</span></a>
+  <nav class="nav"><a href="../index.html#projects">Projects</a><a href="../index.html#capabilities">Capabilities</a><a href="../index.html#contact">Contact</a></nav>
+</div></header>
+
+<main id="main">
 <section class="case-hero"><div class="container">
   <div class="breadcrumb"><a href="../index.html">Portfolio</a> / Cable-Driven Parallel 3D Concrete Printer</div>
-  <div class="case-title"><p class="eyebrow">Motion Control · R&D · Systems Integration</p><h1>Cable-Driven Parallel 3D Concrete Printer</h1>
-  <p class="lead">A large-scale robotic printing platform built around movable cable towers, a suspended cubic end effector and multidisciplinary control/electronics integration.</p>
-  <div class="case-meta"><span class="tag">Motion Control</span><span class="tag">PID</span><span class="tag">OpenCV</span><span class="tag">HMI</span><span class="tag">Electronics</span></div></div>
-  <div class="case-cover" style="background-image:linear-gradient(180deg,rgba(8,42,70,.03),rgba(8,42,70,.78)),url('../assets/concrete-printer/i-hardware-cart.jpg'),linear-gradient(135deg,#9ed8f5,#5db8b5);">
-    <div class="case-cover-copy">
-      <strong>Motion-control development hardware</strong>
-      <span>R&D cart with 24 V supply, servo motor, gearbox, Galil 8-axis motion controller and project wiring.</span>
+  <div class="case-title">
+    <p class="eyebrow">Motion Control · R&D · Systems Integration</p>
+    <h1>Cable-Driven Parallel 3D Concrete Printer</h1>
+    <p class="lead">A large-scale robotic printing platform combining cable-driven motion, custom spool and extrusion hardware, industrial controls, operator interfaces and physical concrete-printing trials.</p>
+    <div class="case-meta">
+      <span class="tag">Motion Control</span><span class="tag">Servo Systems</span><span class="tag">HMI</span><span class="tag">Industrial Electronics</span><span class="tag">R&D</span>
     </div>
   </div>
 
-<div class="case-intro-grid">
-    <div class="detail-card"><h3>System architecture</h3><p>Four movable tower stations supported a cable-suspended cubic end effector carrying the extrusion nozzle. Screw jacks provided a rigid operating base after positioning.</p></div>
-    <div class="detail-card"><h3>My contribution</h3><p>Electronics, control integration, wiring, motion-system bring-up, HMI work, testing, troubleshooting and multidisciplinary engineering support.</p></div>
+  <div class="case-cover" style="background-image:linear-gradient(180deg,rgba(8,42,70,.03),rgba(8,42,70,.78)),url('../assets/concrete-printer/h-layer-test-isometric.jpg'),linear-gradient(135deg,#9ed8f5,#5db8b5);">
+    <div class="case-cover-copy">
+      <strong>Physical print validation</strong>
+      <span>Concrete layer and corner test produced during development of the cable-driven printing platform.</span>
+    </div>
   </div>
-  <div class="system-diagram"><p class="eyebrow">Control concept</p><div class="flow">
-    <span class="node">Motion Controller</span><span class="arrow">→</span><span class="node">Motor / Cable Axes</span><span class="arrow">→</span>
-    <span class="node">Suspended End Effector</span><span class="arrow">↔</span><span class="node">Camera Feedback</span><span class="arrow">→</span><span class="node">PID Correction</span>
-  </div></div>
+
+  <div class="case-intro-grid">
+    <div class="detail-card"><h3>System architecture</h3><p>Four movable tower stations supported a cable-suspended cubic end effector. Coordinated cable motion created XYZ positioning while the extrusion system deposited concrete.</p></div>
+    <div class="detail-card"><h3>My contribution</h3><p>Electronics and control integration, wiring, motor/drive bring-up, spool and extrusion R&D, tower-control interface work, testing, troubleshooting and multidisciplinary engineering support.</p></div>
+  </div>
+
+  <div class="system-diagram">
+    <p class="eyebrow">Engineering flow</p>
+    <div class="flow">
+      <span class="node">Operator Interface</span><span class="arrow">→</span>
+      <span class="node">Motion Controller</span><span class="arrow">→</span>
+      <span class="node">Motor / Drive Hardware</span><span class="arrow">→</span>
+      <span class="node">Cable / Spool Motion</span><span class="arrow">→</span>
+      <span class="node">End Effector / Auger</span><span class="arrow">→</span>
+      <span class="node">Concrete Print</span>
+    </div>
+  </div>
 </div></section>
 
-<section class="section"><div class="container"><p class="eyebrow">The challenge</p><h2>Coordinating a large physical system with multiple interacting subsystems</h2>
-<p class="section-intro">The project required motion, electronics, mechanics, software and calibration to work as one platform rather than as isolated components.</p>
-<div class="case-list">
-  <article class="case-card"><h3>Mechanical & motion architecture</h3><div class="case-grid">
-    <div class="case-block"><strong>Movable towers</strong><span>Tower stations could be repositioned for setup flexibility and then stabilized for operation using lowered screw jacks.</span></div>
-    <div class="case-block"><strong>Suspended end effector</strong><span>A cubic cable-driven end effector carried the extrusion nozzle and moved in XYZ through coordinated cable motion.</span></div>
-  </div></article>
-  <article class="case-card"><h3>Controls & electronics</h3><div class="case-grid">
-    <div class="case-block"><strong>Motion control</strong><span>The platform incorporated multi-axis industrial motion hardware, motor/drive integration and closed-loop correction work.</span></div>
-    <div class="case-block"><strong>Human interface</strong><span>HMI functions supported setup and tower-related adjustment/operation during system development.</span></div>
-  </div></article>
-  <article class="case-card"><h3>Camera-assisted correction</h3><div class="case-grid">
-    <div class="case-block"><strong>Observation</strong><span>An overhead camera was used as an additional measurement source for positional error.</span></div>
-    <div class="case-block"><strong>Correction concept</strong><span>OpenCV-based positional feedback supported PID-style correction of observed error during R&D.</span></div>
-  </div></article>
-</div>
+<section class="section"><div class="container">
+  <p class="eyebrow">Case 01</p>
+  <h2>Electrical, drive and motion-control integration</h2>
+  <p class="section-intro">The platform started with practical integration work: connector preparation, field wiring, drive connections and multi-axis motion hardware assembled into a working R&D system.</p>
+  <div class="case-list">
+    <article class="case-card"><div class="case-grid">
+      <div class="case-block"><strong>Motor-driver connections</strong><span>Stepper-driver connectors and control wiring were prepared as part of the motion-system build.</span></div>
+      <div class="case-block"><strong>Wiring quality</strong><span>Color-coded conductors were terminated with ferrules into the control connector for a clean, serviceable connection.</span></div>
+      <div class="case-block"><strong>Servo integration</strong><span>Servo motor connections were integrated with the servo drive as the higher-power motion hardware was brought online.</span></div>
+      <div class="case-block"><strong>R&D hardware cart</strong><span>A development cart brought together a 24 V power supply, servo motor, gearbox, Galil 8-axis motion controller and project wiring.</span></div>
+    </div></article>
+  </div>
   <div class="case-media-block">
     <p class="eyebrow">Electrical & Motion Evidence</p>
     <div class="photo-grid">
-      <figure class="photo-card"><img src="../assets/concrete-printer/a-stepper-connectors.jpg" alt="Stepper motor driver wiring connectors"><figcaption><strong>Stepper-driver connectors</strong>Project wiring connectors used during motion-control development.</figcaption></figure>
-      <figure class="photo-card"><img src="../assets/concrete-printer/b-control.jpg" alt="Green control connector with ferruled colored wiring"><figcaption><strong>Ferruled control wiring</strong>Color-coded wiring terminated into the green connector using ferrules.</figcaption></figure>
+      <figure class="photo-card"><img src="../assets/concrete-printer/stepper-driver-wiring-connectors.jpg" alt="Stepper motor driver wiring connectors"><figcaption><strong>Stepper-driver connectors</strong>Wiring connectors used during motion-control development.</figcaption></figure>
+      <figure class="photo-card"><img src="../assets/concrete-printer/b-control.jpg" alt="Green control connector with colored ferruled wiring"><figcaption><strong>Ferruled control wiring</strong>Color-coded wiring terminated into the green connector with ferrules.</figcaption></figure>
       <figure class="photo-card"><img src="../assets/concrete-printer/d-servo-drive.jpg" alt="Servo motor connections to servo drive"><figcaption><strong>Servo-drive connections</strong>Servo motor connections into the drive hardware.</figcaption></figure>
-      <figure class="photo-card"><img src="../assets/concrete-printer/i-hardware-cart.jpg" alt="R&D motion hardware cart"><figcaption><strong>Motion-control hardware cart</strong>24 V supply, servo motor, gearbox, Galil 8-axis motion controller and project wiring.</figcaption></figure>
-    </div>
-  </div>
-
-  <div class="case-media-block">
-    <p class="eyebrow">Spool & End-Effector R&D</p>
-    <div class="photo-grid">
-      <figure class="photo-card"><img src="../assets/concrete-printer/c-rnd-spool.jpg" alt="3D printed R&D spool with ball screw geared motor and multimeter"><figcaption><strong>3D-printed R&D spool</strong>Prototype spool development with ball screw, geared motor/spool assembly and bench multimeter visible.</figcaption></figure>
-      <figure class="photo-card"><img src="../assets/concrete-printer/e-servo-spool.jpg" alt="Servo motor attached to spool"><figcaption><strong>Servo motor + spool</strong>Servo motor mechanically attached to the spool assembly.</figcaption></figure>
-      <figure class="photo-card"><img src="../assets/concrete-printer/f-auger-01.jpg" alt="Screw auger for concrete printer end effector"><figcaption><strong>End-effector auger — view 1</strong>Screw-auger hardware used for the end-effector extrusion system.</figcaption></figure>
-      <figure class="photo-card"><img src="../assets/concrete-printer/g-auger-02.jpg" alt="Second view of end effector screw auger"><figcaption><strong>End-effector auger — view 2</strong>Second project view of the auger hardware.</figcaption></figure>
-    </div>
-  </div>
-
-  <div class="case-media-block">
-    <p class="eyebrow">Tower Control Interface</p>
-    <div class="photo-grid">
-      <figure class="photo-card"><img src="../assets/concrete-printer/j-tower-gui.png" alt="Tower control GUI screenshot"><figcaption><strong>Tower-control GUI</strong>Screenshot of the project tower-control interface.</figcaption></figure>
-      <figure class="photo-card"><video controls preload="metadata" playsinline src="../assets/concrete-printer/m-interface-video.mp4" aria-label="Tower control interface video"></video><figcaption><strong>Interface demonstration</strong>Project video showing the tower-control interface in operation.</figcaption></figure>
+      <figure class="photo-card"><img src="../assets/concrete-printer/i-hardware-cart.jpg" alt="Motion-control R&D cart with power supply servo motor gearbox controller and wiring"><figcaption><strong>Motion-control hardware cart</strong>24 V supply, servo motor, gearbox, Galil 8-axis motion controller and project wiring.</figcaption></figure>
     </div>
   </div>
 </div></section>
 
 <section class="section section-alt"><div class="container">
-<p class="eyebrow">Validation</p><h2>From integration to physical printing</h2>
-<p class="section-intro">The platform progressed beyond bench integration to actual concrete-printing trials, providing a full-system test of motion, electronics, software and extrusion behavior.</p>
-<div class="case-media-block">
+  <p class="eyebrow">Case 02</p>
+  <h2>Spool and cable-drive mechanism R&D</h2>
+  <p class="section-intro">The cable-driven architecture depended on translating motor rotation into controlled cable movement, so spool geometry and the motor-to-spool mechanism were developed and tested as their own subsystem.</p>
+  <div class="case-list">
+    <article class="case-card"><div class="case-grid">
+      <div class="case-block"><strong>Prototype spool</strong><span>A 3D-printed R&D spool was used during mechanism development alongside the ball-screw / geared arrangement and bench measurement equipment.</span></div>
+      <div class="case-block"><strong>Servo / spool assembly</strong><span>A servo motor was mechanically attached to the spool assembly for motion-system development and testing.</span></div>
+    </div></article>
+  </div>
+  <div class="case-media-block">
+    <p class="eyebrow">Spool Development Evidence</p>
+    <div class="photo-grid">
+      <figure class="photo-card"><img src="../assets/concrete-printer/c-rnd-spool.jpg" alt="3D printed R&D spool with ball screw geared motor and multimeter"><figcaption><strong>3D-printed R&D spool</strong>Prototype spool work with ball-screw / geared mechanism and bench multimeter visible.</figcaption></figure>
+      <figure class="photo-card"><img src="../assets/concrete-printer/e-servo-spool.jpg" alt="Servo motor attached to cable spool assembly"><figcaption><strong>Servo motor + spool</strong>Servo motor mechanically integrated with the spool assembly.</figcaption></figure>
+    </div>
+  </div>
+</div></section>
+
+<section class="section"><div class="container">
+  <p class="eyebrow">Case 03</p>
+  <h2>End-effector extrusion development</h2>
+  <p class="section-intro">The suspended end effector needed a practical way to move concrete through the print head, leading to screw-auger development for the extrusion subsystem.</p>
+  <div class="case-list">
+    <article class="case-card"><div class="case-grid">
+      <div class="case-block"><strong>Material delivery</strong><span>A screw-auger mechanism formed part of the end-effector material-delivery hardware.</span></div>
+      <div class="case-block"><strong>Iterative R&D</strong><span>Multiple physical views were documented while developing the auger and its integration into the printing head.</span></div>
+    </div></article>
+  </div>
+  <div class="case-media-block">
+    <p class="eyebrow">End-Effector Evidence</p>
+    <div class="photo-grid">
+      <figure class="photo-card"><img src="../assets/concrete-printer/f-auger-01.jpg" alt="Screw auger used for the concrete printer end effector"><figcaption><strong>End-effector auger — view 1</strong>Screw-auger hardware used in the extrusion assembly.</figcaption></figure>
+      <figure class="photo-card"><img src="../assets/concrete-printer/g-auger-02.jpg" alt="Second view of concrete printer end-effector screw auger"><figcaption><strong>End-effector auger — view 2</strong>Second project view of the extrusion auger.</figcaption></figure>
+    </div>
+  </div>
+</div></section>
+
+<section class="section section-alt"><div class="container">
+  <p class="eyebrow">Case 04</p>
+  <h2>Tower control interface</h2>
+  <p class="section-intro">Operator-facing controls supported tower-related setup and system interaction during R&D, connecting the physical motion hardware to a usable control workflow.</p>
+  <div class="case-list">
+    <article class="case-card"><div class="case-grid">
+      <div class="case-block"><strong>GUI</strong><span>A dedicated tower-control GUI provided the operator interface used during development.</span></div>
+      <div class="case-block"><strong>Functional demonstration</strong><span>A project video records the tower-control interface in operation.</span></div>
+    </div></article>
+  </div>
+  <div class="case-media-block">
+    <p class="eyebrow">Interface Evidence</p>
+    <div class="photo-grid">
+      <figure class="photo-card"><img src="../assets/concrete-printer/j-tower-gui.png" alt="Tower control GUI screenshot"><figcaption><strong>Tower-control GUI</strong>Screenshot of the tower-control interface.</figcaption></figure>
+      <figure class="photo-card"><video controls preload="metadata" playsinline src="../assets/concrete-printer/m-interface-video.mp4" aria-label="Tower control interface demonstration video"></video><figcaption><strong>Interface demonstration</strong>Video showing the tower-control interface in operation.</figcaption></figure>
+    </div>
+  </div>
+</div></section>
+
+<section class="section"><div class="container">
+  <p class="eyebrow">Case 05</p>
+  <h2>Concrete-printing validation</h2>
+  <p class="section-intro">The project progressed from subsystem development into physical printing trials, allowing layer deposition, corners, wall geometry and infill behavior to be evaluated on real concrete prints.</p>
+  <div class="case-list">
+    <article class="case-card"><div class="case-grid">
+      <div class="case-block"><strong>Layer & corner test</strong><span>An isometric print documents deposited layers and a formed corner during validation.</span></div>
+      <div class="case-block"><strong>Wall infill</strong><span>A separate test print documents wall and infill geometry.</span></div>
+      <div class="case-block"><strong>Side profile</strong><span>A side-view test documents the stacked layer profile from another print trial.</span></div>
+    </div></article>
+  </div>
+  <div class="case-media-block">
     <p class="eyebrow">Print-Test Evidence</p>
     <div class="photo-grid">
-      <figure class="photo-card"><img src="../assets/concrete-printer/h-layer-test-isometric.jpg" alt="Printed concrete layer test corner in isometric view"><figcaption><strong>Layer / corner test</strong>Isometric view of a printed layer trial showing corner geometry.</figcaption></figure>
-      <figure class="photo-card"><img src="../assets/concrete-printer/k-wall-infill-test.png" alt="Concrete wall infill test print"><figcaption><strong>Wall infill test</strong>Concrete print used to evaluate wall and infill behavior.</figcaption></figure>
-      <figure class="photo-card"><img src="../assets/concrete-printer/l-layer-test-side.png" alt="Concrete printing layer test side view"><figcaption><strong>Layer test — side view</strong>Side profile of deposited layers from a print trial.</figcaption></figure>
+      <figure class="photo-card"><img src="../assets/concrete-printer/h-layer-test-isometric.jpg" alt="Concrete printed layer and corner test in isometric view"><figcaption><strong>Layer / corner test</strong>Isometric view of a printed-layer trial showing corner geometry.</figcaption></figure>
+      <figure class="photo-card"><img src="../assets/concrete-printer/k-wall-infill-test.png" alt="Concrete wall infill test print"><figcaption><strong>Wall infill test</strong>Concrete print trial documenting wall and infill behavior.</figcaption></figure>
+      <figure class="photo-card"><img src="../assets/concrete-printer/l-layer-test-side.png" alt="Side view of concrete printed layer test"><figcaption><strong>Layer test — side view</strong>Side profile of deposited concrete layers from a print trial.</figcaption></figure>
     </div>
   </div>
-<div class="callout">A collaborator’s public project article reports a 14-month development effort and approximately 2–2.5 mm printing accuracy; those figures are attributed to that article rather than presented here as my independent measurement.</div>
+  <div class="callout">A collaborator’s public project article reports a 14-month development effort and approximately 2–2.5 mm printing accuracy; those figures are attributed to that article rather than presented here as my independent measurement.</div>
+</div></section>
 
+<section class="section section-alt"><div class="container">
+  <p class="eyebrow">Additional R&D</p>
+  <h2>Camera-assisted positional correction</h2>
+  <div class="case-list">
+    <article class="case-card"><div class="case-grid">
+      <div class="case-block"><strong>Observation</strong><span>An overhead camera was explored as an additional measurement source for positional error.</span></div>
+      <div class="case-block"><strong>Correction approach</strong><span>OpenCV-based positional feedback was used during R&D to support PID-style correction of observed error.</span></div>
+    </div></article>
+  </div>
+  <div class="media-note">No camera-feedback image is currently published in this portfolio section; the description is kept separate from the photographed hardware evidence.</div>
+</div></section>
+
+<section class="section"><div class="container">
+  <p class="eyebrow">Skills demonstrated</p>
+  <h2>Multidisciplinary engineering integration</h2>
+  <div class="skill-cloud">
+    <span>Systems Integration</span><span>Motion Control</span><span>Servo Systems</span><span>Industrial Electronics</span>
+    <span>Control Wiring</span><span>Galil Motion Control</span><span>HMI / GUI</span><span>Mechanical Prototyping</span>
+    <span>Extrusion R&D</span><span>OpenCV</span><span>PID Control</span><span>R&D Testing</span>
+  </div>
+  <p class="small">The generated illustration retained in the project asset folder is not used as documentary evidence on this page.</p>
+</div></section>
+
+<section class="section section-soft"><div class="container">
   <div class="project-media-block">
     <p class="eyebrow">Project media</p>
-    <h2>Engineering evidence</h2>
+    <h2>Engineering evidence overview</h2>
     <div class="media-gallery">
-      
-      <div class="media-tile media-placeholder" style="background-image:linear-gradient(180deg,rgba(8,39,63,.04),rgba(8,39,63,.78)),url('../assets/concrete-printer/i-hardware-cart.jpg'),linear-gradient(135deg,#7bc8ec,#5db8b5);">
-        <span>Motion-Control Hardware<small>R&D control hardware used during development.</small></span>
-      </div>
-      <div class="media-tile media-placeholder" style="background-image:linear-gradient(180deg,rgba(8,39,63,.04),rgba(8,39,63,.78)),url('../assets/concrete-printer/e-servo-spool.jpg'),linear-gradient(135deg,#7bc8ec,#5db8b5);">
-        <span>Servo / Spool Assembly<small>Servo motor integrated with the spool mechanism.</small></span>
-      </div>
-      <div class="media-tile media-placeholder" style="background-image:linear-gradient(180deg,rgba(8,39,63,.04),rgba(8,39,63,.78)),url('../assets/concrete-printer/a-stepper-connectors.jpg'),linear-gradient(135deg,#7bc8ec,#5db8b5);">
-        <span>Stepper Wiring<small>Motor-driver connector and wiring development.</small></span>
-      </div>
-      <div class="media-tile media-placeholder" style="background-image:linear-gradient(180deg,rgba(8,39,63,.04),rgba(8,39,63,.78)),url('../assets/concrete-printer/f-auger-01.jpg'),linear-gradient(135deg,#7bc8ec,#5db8b5);">
-        <span>End-Effector Auger<small>Screw-auger extrusion hardware.</small></span>
-      </div>
-      <div class="media-tile media-placeholder" style="background-image:linear-gradient(180deg,rgba(8,39,63,.04),rgba(8,39,63,.78)),url('../assets/concrete-printer/k-wall-infill-test.png'),linear-gradient(135deg,#7bc8ec,#5db8b5);">
-        <span>Concrete Print Test<small>Wall / infill validation trial.</small></span>
-      </div>
+      <div class="media-tile media-placeholder" style="background-image:linear-gradient(180deg,rgba(8,39,63,.04),rgba(8,39,63,.78)),url('../assets/concrete-printer/i-hardware-cart.jpg'),linear-gradient(135deg,#7bc8ec,#5db8b5);"><span>Motion-Control Hardware<small>Power, servo, gearbox, multi-axis controller and wiring.</small></span></div>
+      <div class="media-tile media-placeholder" style="background-image:linear-gradient(180deg,rgba(8,39,63,.04),rgba(8,39,63,.78)),url('../assets/concrete-printer/e-servo-spool.jpg'),linear-gradient(135deg,#7bc8ec,#5db8b5);"><span>Servo / Spool Assembly<small>Servo motor integrated with the cable spool.</small></span></div>
+      <div class="media-tile media-placeholder" style="background-image:linear-gradient(180deg,rgba(8,39,63,.04),rgba(8,39,63,.78)),url('../assets/concrete-printer/f-auger-01.jpg'),linear-gradient(135deg,#7bc8ec,#5db8b5);"><span>End-Effector Auger<small>Screw-auger extrusion hardware.</small></span></div>
+      <div class="media-tile media-placeholder" style="background-image:linear-gradient(180deg,rgba(8,39,63,.04),rgba(8,39,63,.78)),url('../assets/concrete-printer/j-tower-gui.png'),linear-gradient(135deg,#7bc8ec,#5db8b5);"><span>Tower-Control GUI<small>Operator interface used during development.</small></span></div>
+      <div class="media-tile media-placeholder" style="background-image:linear-gradient(180deg,rgba(8,39,63,.04),rgba(8,39,63,.78)),url('../assets/concrete-printer/h-layer-test-isometric.jpg'),linear-gradient(135deg,#7bc8ec,#5db8b5);"><span>Layer / Corner Test<small>Physical concrete-print validation.</small></span></div>
+      <div class="media-tile media-placeholder" style="background-image:linear-gradient(180deg,rgba(8,39,63,.04),rgba(8,39,63,.78)),url('../assets/concrete-printer/k-wall-infill-test.png'),linear-gradient(135deg,#7bc8ec,#5db8b5);"><span>Wall Infill Test<small>Concrete wall and infill trial.</small></span></div>
     </div>
   </div>
-
-<div class="skill-cloud"><span>Systems Integration</span><span>Motion Control</span><span>Industrial Electronics</span><span>PID Control</span><span>OpenCV</span><span>Python</span><span>HMI</span><span>R&D Testing</span></div>
-<div class="project-nav"><a href="komo-cnc.html">← KOMO CNC</a><a href="food-robot.html">Next: Mobile Robot →</a></div>
+  <div class="project-nav"><a href="komo-cnc.html">← KOMO CNC</a><a href="food-robot.html">Next: Mobile Robot →</a></div>
 </div></section>
 </main>
+
 <footer class="site-footer"><div class="container footer-wrap"><span>Garry Bajwa · Engineering & Automation Portfolio</span><a class="external-link" href="https://www.linkedin.com/in/gurwinderjit-singh" target="_blank" rel="noreferrer">LinkedIn</a></div></footer>
-  <script src="../project-lightbox.js?v=20261007b"></script>
-</body></html>
+<script src="../project-lightbox.js?v=20261007c"></script>
+</body>
+</html>
