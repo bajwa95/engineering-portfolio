@@ -43,8 +43,8 @@ window.PORTFOLIO_PROJECTS = [
     description: "Spindle overload troubleshooting, automatic tool-changer recovery and conveyor material-handling alignment on a production CNC system.",
     tags: ["VFD", "CNC", "Electrical", "Root Cause", "Alignment"],
     href: "projects/komo-cnc.html",
-    image: "assets/komo/spindle-vfd.jpg",
-    imageAlt: "KOMO CNC spindle VFD during troubleshooting",
+    image: "assets/komo/komo-control-cabinet-overview.jpg",
+    imageAlt: "KOMO CNC electrical and controls cabinet",
     featured: true
   },
   {
