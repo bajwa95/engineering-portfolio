@@ -55,8 +55,8 @@ window.PORTFOLIO_PROJECTS = [
     description: "Large-scale cable-driven robotic platform integrating motion control, electronics, software, mechanical systems and camera-assisted positional feedback.",
     tags: ["Motion", "PID", "OpenCV", "HMI", "Integration"],
     href: "projects/concrete-printer.html",
-    image: "assets/concrete-printer/overview.jpg",
-    imageAlt: "Cable-driven parallel 3D concrete printer",
+    image: "assets/concrete-printer/i-hardware-cart.jpg",
+    imageAlt: "Motion-control development hardware for the cable-driven concrete printer",
     featured: false
   },
   {
