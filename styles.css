@@ -1193,3 +1193,16 @@ body.project-lightbox-open{
     height:42px;
   }
 }
+
+
+/* Project evidence video cards */
+.photo-card video{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+  display:block;
+  background:#0b1721;
+}
+@media(max-width:700px){
+  .photo-card video{height:auto;max-height:340px}
+}
