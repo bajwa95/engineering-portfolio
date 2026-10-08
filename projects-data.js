@@ -31,7 +31,7 @@ window.PORTFOLIO_PROJECTS = [
     description: "Redesigned a corrosion-prone gate-position sensor from a mechanical contact arrangement to a glass-sealed dual reed-switch retrofit with a custom 3D-printed mount.",
     tags: ["Controls", "Sensors", "Root Cause", "Onshape", "3D Printing"],
     href: "projects/gate-sensor-retrofit.html",
-    image: "assets/gate-sensor/final-reed-module.jpg",
+    image: "assets/gate-sensor/dual-reed-switch-retrofit.jpg",
     imageAlt: "Custom 3D-printed gate sensor module with dual reed switches",
     featured: true
   },

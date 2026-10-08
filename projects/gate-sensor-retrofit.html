@@ -23,7 +23,7 @@
     <div class="case-meta"><span class="tag">Controls</span><span class="tag">Sensors</span><span class="tag">Root Cause</span><span class="tag">Onshape</span><span class="tag">3D Printing</span></div>
   </div>
 
-  <div class="case-cover gate-cover" style="background-image:linear-gradient(180deg,rgba(8,42,70,.03),rgba(8,42,70,.78)),url('../assets/gate-sensor/field-diagnostics.jpg'),linear-gradient(135deg,#9ed8f5,#5db8b5);">
+  <div class="case-cover gate-cover" style="background-image:linear-gradient(180deg,rgba(8,42,70,.03),rgba(8,42,70,.78)),url('../assets/gate-sensor/gate-operator-mechanism.jpeg'),linear-gradient(135deg,#9ed8f5,#5db8b5);">
     <div class="case-cover-copy"><strong>Field diagnosis at the gate operator</strong><span>The repair began by checking the installed drive, wiring and position-sensing path rather than assuming the motor or controller was the cause.</span></div>
   </div>
 
@@ -47,7 +47,7 @@
       <p>The gate operator therefore had a sensing problem even though the rest of the drive system still required separate verification.</p>
     </article>
     <figure class="gate-media-card">
-      <img src="../assets/gate-sensor/corroded-original-illustration.jpg" alt="Illustrative reconstruction of a corroded spring-loaded mechanical contact sensor">
+      <img src="../assets/gate-sensor/original-sensor-corrosion-reconstruction.png" alt="Illustrative reconstruction of a corroded spring-loaded mechanical contact sensor">
       <figcaption><strong>Original failure mode — illustrative reconstruction</strong><span>This image was created to communicate the observed corrosion and damaged mechanical-contact failure mode because the original failed sensor was not photographed clearly enough for publication. It is not documentary evidence.</span></figcaption>
     </figure>
   </div>
@@ -79,15 +79,15 @@
 
   <div class="gate-media-grid">
     <figure class="gate-media-card is-portrait">
-      <img src="../assets/gate-sensor/field-diagnostics.jpg" alt="Sliding gate operator opened during electrical troubleshooting">
+      <img src="../assets/gate-sensor/gate-operator-mechanism.jpeg" alt="Sliding gate operator opened during electrical troubleshooting">
       <figcaption><strong>Field troubleshooting</strong><span>Inspection of the operator, wiring and sensing path during fault isolation.</span></figcaption>
     </figure>
     <figure class="gate-media-card is-portrait">
-      <img src="../assets/gate-sensor/final-reed-module.jpg" alt="Custom blue 3D-printed sensor module containing two reed switches">
+      <img src="../assets/gate-sensor/dual-reed-switch-retrofit.jpg" alt="Custom blue 3D-printed sensor module containing two reed switches">
       <figcaption><strong>Final replacement module</strong><span>Custom 3D-printed mounting hardware with the dual reed-switch arrangement used in the retrofit.</span></figcaption>
     </figure>
     <figure class="gate-media-card">
-      <img src="../assets/gate-sensor/corroded-original-illustration.jpg" alt="Illustrative reconstruction of the corroded original sensor">
+      <img src="../assets/gate-sensor/original-sensor-corrosion-reconstruction.png" alt="Illustrative reconstruction of the corroded original sensor">
       <figcaption><strong>Why the architecture changed</strong><span>Illustrative reconstruction of the original spring-loaded contact failure mode; clearly separated here from the documentary project photos.</span></figcaption>
     </figure>
   </div>
@@ -103,7 +103,10 @@
       <div class="case-block"><strong>System result</strong><span>Normal gate operation was restored with the new sensing arrangement integrated into the existing controller.</span></div>
     </div></article>
   </div>
-  <div class="media-note"><strong>Working video:</strong> a validation clip showing the display transition from <code>--</code> to <code>-OP-</code>, followed by motor/gear movement and gate travel, can be added to this page when the video file is prepared for web use.</div>
+  <div class="photo-grid">
+    <figure class="photo-card"><img src="../assets/gate-sensor/el5-error-display.jpeg" alt="Gate controller display showing the EL5 sensor-related error condition"><figcaption><strong>Fault indication</strong>Controller display captured during the original sensing fault.</figcaption></figure>
+    <figure class="photo-card"><video controls preload="metadata" playsinline src="../assets/gate-sensor/gate-operation-validation.mp4" aria-label="Validation video showing the gate opening sequence after the sensor retrofit"></video><figcaption><strong>Functional validation</strong>Working sequence after the retrofit: normal indication, open command, motor/gear movement and gate travel.</figcaption></figure>
+  </div>
 </div></section>
 
 <section class="section section-alt"><div class="container">
