@@ -1206,3 +1206,23 @@ body.project-lightbox-open{
 @media(max-width:700px){
   .photo-card video{height:auto;max-height:340px}
 }
+
+
+/* Portrait project video */
+.portrait-video-card{
+  grid-column:1 / -1;
+  width:min(100%,420px);
+  justify-self:center;
+}
+.photo-card.portrait-video-card video{
+  width:100%;
+  height:auto;
+  aspect-ratio:9 / 16;
+  object-fit:contain;
+  display:block;
+  background:#07131c;
+}
+@media(max-width:700px){
+  .portrait-video-card{width:min(100%,360px)}
+  .photo-card.portrait-video-card video{max-height:none}
+}
