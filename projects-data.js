@@ -66,7 +66,7 @@ window.PORTFOLIO_PROJECTS = [
     kicker: "Robotics · LiDAR · Android",
     description: "Android-based destination selection integrated with SLAMTEC LiDAR, mapping/localization and autonomous navigation.",
     tags: ["LiDAR", "SLAM", "Android", "TCP/IP", "Robotics"],
-    href: "projects/food-robot.html",
+    href: "projects/food-robot.html?v=20261008c",
     image: "assets/robot/a.jpg",
     imageAlt: "Food-serving mobile robot project development photo",
     featured: false
