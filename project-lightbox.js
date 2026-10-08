@@ -1,19 +1,50 @@
-// Portfolio media rule: any video whose filename starts with '-' is muted by default.
+// Portfolio media rule: any video whose filename starts with '-' must remain silent.
 (function () {
-  const videos = Array.from(document.querySelectorAll("video"));
-  videos.forEach((video) => {
-    const source = video.currentSrc || video.getAttribute("src") || video.querySelector("source")?.getAttribute("src") || "";
-    if (!source) return;
+  const isSilentVideo = (video) => {
+    const source =
+      video.getAttribute("src") ||
+      video.querySelector("source")?.getAttribute("src") ||
+      video.currentSrc ||
+      "";
+    if (!source) return false;
+
     try {
       const pathname = new URL(source, window.location.href).pathname;
       const filename = decodeURIComponent(pathname.split("/").pop() || "");
-      if (filename.startsWith("-")) {
+      return filename.startsWith("-");
+    } catch (_) {
+      return false;
+    }
+  };
+
+  const enforceSilence = (video) => {
+    if (!isSilentVideo(video)) return;
+
+    video.muted = true;
+    video.defaultMuted = true;
+    video.volume = 0;
+    video.setAttribute("muted", "");
+
+    // If the viewer tries to unmute a dash-prefixed video, immediately mute it again.
+    video.addEventListener("volumechange", () => {
+      if (!video.muted || video.volume !== 0) {
         video.muted = true;
-        video.defaultMuted = true;
-        video.setAttribute("muted", "");
+        video.volume = 0;
       }
-    } catch (_) {}
-  });
+    });
+  };
+
+  const apply = () => document.querySelectorAll("video").forEach(enforceSilence);
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", apply, { once: true });
+  } else {
+    apply();
+  }
+
+  // Also cover videos added later by dynamic page code.
+  const observer = new MutationObserver(() => apply());
+  observer.observe(document.documentElement, { childList: true, subtree: true });
 })();
 
 (function () {
