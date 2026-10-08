@@ -1,3 +1,21 @@
+// Portfolio media rule: any video whose filename starts with '-' is muted by default.
+(function () {
+  const videos = Array.from(document.querySelectorAll("video"));
+  videos.forEach((video) => {
+    const source = video.currentSrc || video.getAttribute("src") || video.querySelector("source")?.getAttribute("src") || "";
+    if (!source) return;
+    try {
+      const pathname = new URL(source, window.location.href).pathname;
+      const filename = decodeURIComponent(pathname.split("/").pop() || "");
+      if (filename.startsWith("-")) {
+        video.muted = true;
+        video.defaultMuted = true;
+        video.setAttribute("muted", "");
+      }
+    } catch (_) {}
+  });
+})();
+
 (function () {
   const selectors = [
     ".photo-card img",
