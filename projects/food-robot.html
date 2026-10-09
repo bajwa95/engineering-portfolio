@@ -45,37 +45,48 @@
   <div class="project-media-block">
     <p class="eyebrow">Project media</p>
     <h2>Engineering evidence</h2>
-    <div class="media-gallery">
-      
-      <div class="media-tile media-placeholder" style="background-image:linear-gradient(180deg,rgba(8,39,63,.04),rgba(8,39,63,.78)),url('../assets/robot/a.jpg'),linear-gradient(135deg,#7bc8ec,#5db8b5);">
-        <span>Robot Project Photo<small>Physical project evidence from the mobile-robot development work.</small></span>
-      </div>
-      <div class="media-tile media-placeholder" style="background-image:linear-gradient(180deg,rgba(8,39,63,.04),rgba(8,39,63,.78)),url('../assets/robot/e.png'),linear-gradient(135deg,#7bc8ec,#5db8b5);">
-        <span>Android / GUI Evidence<small>Uploaded interface screenshot from the robot project.</small></span>
-      </div>
-      <div class="media-tile media-placeholder" style="background-image:linear-gradient(180deg,rgba(8,39,63,.04),rgba(8,39,63,.78)),url('../assets/robot/f.png'),linear-gradient(135deg,#7bc8ec,#5db8b5);">
-        <span>Mapping Evidence<small>Uploaded mapping/navigation screenshot from the project.</small></span>
-      </div>
-      <div class="media-tile media-placeholder" style="background-image:linear-gradient(180deg,rgba(8,39,63,.04),rgba(8,39,63,.78)),url('../assets/robot/g.png'),linear-gradient(135deg,#7bc8ec,#5db8b5);">
-        <span>Robot Development Image<small>Additional project evidence from the mobile-robot work.</small></span>
-      </div>
 
-      <div class="media-tile media-placeholder" style="background-image:linear-gradient(180deg,rgba(8,39,63,.04),rgba(8,39,63,.78)),url('../assets/robot/h.png'),linear-gradient(135deg,#7bc8ec,#5db8b5);">
-        <span>Project Development Image<small>Additional robot project evidence from the development work.</small></span>
+    <div class="case-media-block">
+      <p class="eyebrow">Interface & Navigation</p>
+      <div class="photo-grid">
+        <figure class="photo-card">
+          <img src="../assets/robot/graphical-interface.png" alt="Robot graphical interface used during development">
+          <figcaption><strong>Graphical interface</strong>Operator-facing control interface used during robot development and destination testing.</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img src="../assets/robot/slamtec-navigation-map.png" alt="SLAMTEC navigation and mapping view">
+          <figcaption><strong>Navigation / mapping view</strong>SLAMTEC mapping and localization view used during autonomous-navigation development.</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="case-media-block">
+      <p class="eyebrow">Build-Stage Integration</p>
+      <p class="section-intro">Early assembly photos document the robot before cosmetic finishing and front-tablet installation, with networking, USB, power and audio cabling accessible for integration and testing.</p>
+      <div class="photo-grid">
+        <figure class="photo-card">
+          <img src="../assets/robot/robot-build-stage-wiring-01.jpeg" alt="Food-serving robot under construction with front wiring and cabling exposed">
+          <figcaption><strong>Integration build — view 1</strong>Robot during assembly with the cosmetic head covering and front tablet not yet installed, leaving system cabling accessible for bring-up.</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img src="../assets/robot/robot-build-stage-wiring-02.jpeg" alt="Food-serving robot under construction showing accessible networking USB power and audio cabling">
+          <figcaption><strong>Integration build — view 2</strong>Build-stage view showing accessible networking, USB, power and audio connections before final enclosure and interface installation.</figcaption>
+        </figure>
       </div>
     </div>
 
     <div class="case-media-block">
       <p class="eyebrow">Development & Validation Videos</p>
-      <h2>Interface → pose validation → restaurant operation</h2><p class="section-intro">Three muted project videos document the development progression. Click any player to start playback.</p>
+      <h2>Interface → pose validation → restaurant operation</h2>
+      <p class="section-intro">Three muted project videos document the development progression. Click any player to start playback.</p>
       <div class="photo-grid">
         <figure class="photo-card">
-          <video controls muted playsinline preload="metadata" poster="../assets/robot/e.png" style="width:100%;min-height:300px;display:block;background:#07131c;object-fit:contain" src="../assets/robot/-graphical-interface-demo.mp4" aria-label="Graphical interface demonstration"></video>
-          <figcaption><strong>Graphical interface demo</strong>Operator-facing graphical interface used to select robot destinations during development.</figcaption>
+          <video controls muted playsinline preload="metadata" poster="../assets/robot/graphical-interface.png" style="width:100%;min-height:300px;display:block;background:#07131c;object-fit:contain" src="../assets/robot/-graphical-interface-demo.mp4" aria-label="Graphical interface demonstration"></video>
+          <figcaption><strong>Graphical interface demo</strong>Operator-facing interface used to select robot destinations during development.</figcaption>
         </figure>
 
         <figure class="photo-card">
-          <video controls muted playsinline preload="metadata" poster="../assets/robot/f.png" style="width:100%;min-height:300px;display:block;background:#07131c;object-fit:contain" src="../assets/robot/-android-destination-selection-demo.mp4" aria-label="SLAMTEC destination and pose validation demonstration"></video>
+          <video controls muted playsinline preload="metadata" poster="../assets/robot/slamtec-navigation-map.png" style="width:100%;min-height:300px;display:block;background:#07131c;object-fit:contain" src="../assets/robot/-android-destination-selection-demo.mp4" aria-label="SLAMTEC destination and pose validation demonstration"></video>
           <figcaption><strong>Destination & pose validation</strong>Android GUI command sent to the SLAMTEC development platform. The robot travels to the commanded X/Y location and then adjusts yaw/orientation to reach the requested final pose.</figcaption>
         </figure>
 
@@ -92,5 +103,5 @@
 </div></section>
 </main>
 <footer class="site-footer"><div class="container footer-wrap"><span>Garry Bajwa · Engineering & Automation Portfolio</span><a class="external-link" href="https://www.linkedin.com/in/gurwinderjit-singh" target="_blank" rel="noreferrer">LinkedIn</a></div></footer>
-  <script src="../project-lightbox.js?v=20261008b"></script>
+  <script src="../project-lightbox.js?v=20261008g"></script>
 </body></html>

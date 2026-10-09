@@ -44,7 +44,7 @@ window.PORTFOLIO_PROJECTS = [
     tags: ["VFD", "CNC", "Electrical", "Root Cause", "Alignment"],
     href: "projects/komo-cnc.html",
     image: "assets/komo/mhs-post-alignment-cnc-conveyor.jpeg",
-    imageAlt: "KOMO CNC control cabinet front view after spindle cable installation",
+    imageAlt: "KOMO CNC and conveyor system after material-handling alignment",
     featured: true
   },
   {
@@ -91,8 +91,6 @@ window.PORTFOLIO_PROJECTS = [
     description: "Raspberry Pi and Stream Deck prototype for physical-button control of a rear display, with media management and a web console.",
     tags: ["Raspberry Pi", "Python", "PyQt", "Flask", "USB HID"],
     href: "projects/roadmoji.html",
-    image: "assets/roadmoji/overview.jpg",
-    imageAlt: "Roadmoji Raspberry Pi vehicle display controller prototype",
     featured: false
   }
 ];
