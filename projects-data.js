@@ -159,6 +159,8 @@ window.PORTFOLIO_PROJECTS = [
     description: "Converted a sequence-sensitive relay-controlled fiber filling machine to Siemens S7-1200 PLC control with automatic timing, simplified Start/Stop operation and retained VFD/manual feeder functions.",
     tags: ["Siemens S7-1200", "PLC", "VFD", "Star-Delta", "Machine Controls"],
     href: "projects/fiber-filling-plc-retrofit.html",
+    image: "assets/fiber-filling-plc-retrofit/control-panel-after.jpg",
+    imageAlt: "Fiber filling machine control panel after Siemens S7-1200 PLC retrofit",
     capabilities: {
       automation: "Replaced operator-dependent relay sequencing with Siemens S7-1200 PLC logic controlling machine startup, shutdown, timing, contactors, VFD run commands and a solenoid valve.",
       electrical: "Mapped and rewired five contactor functions, two VFD run signals and one solenoid output while retaining the existing motor-drive hardware.",
