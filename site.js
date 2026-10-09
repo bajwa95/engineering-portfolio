@@ -2,7 +2,12 @@
   const grid = document.getElementById("project-grid");
   if (!grid || !Array.isArray(window.PORTFOLIO_PROJECTS)) return;
 
-  const projects = [...window.PORTFOLIO_PROJECTS].sort((a, b) => Number(b.featured) - Number(a.featured));
+  const projects = [...window.PORTFOLIO_PROJECTS].sort((a, b) => {
+    const orderA = Number.isFinite(Number(a.order)) ? Number(a.order) : 9999;
+    const orderB = Number.isFinite(Number(b.order)) ? Number(b.order) : 9999;
+    if (orderA !== orderB) return orderA - orderB;
+    return String(a.title || "").localeCompare(String(b.title || ""));
+  });
 
   const count = document.getElementById("project-count");
   if (count) count.textContent = projects.length + (projects.length === 1 ? " project" : " projects");

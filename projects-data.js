@@ -1,5 +1,6 @@
 window.PORTFOLIO_PROJECTS = [
   {
+    order: 1,
     title: "Forklift-Mounted Workstation Power Integration",
     mediaTitle: "Forklift Workstation Power",
     mediaSubtitle: "32 VDC · DC-DC conversion · mobile computing",
@@ -12,6 +13,7 @@ window.PORTFOLIO_PROJECTS = [
     featured: true
   },
   {
+    order: 2,
     title: "John Deere 450C Fuel-System Reliability Retrofit",
     mediaTitle: "Dozer Fuel-System Retrofit",
     mediaSubtitle: "Mechanical troubleshooting · 12 VDC · reliability",
@@ -24,6 +26,7 @@ window.PORTFOLIO_PROJECTS = [
     featured: true
   },
   {
+    order: 3,
     title: "Forklift Charger Electrical Reconfiguration",
     mediaTitle: "Forklift Charger Reconfiguration",
     mediaSubtitle: "Industrial electrical · transformer configuration · equipment relocation",
@@ -36,6 +39,7 @@ window.PORTFOLIO_PROJECTS = [
     featured: false
   },
   {
+    order: 4,
     title: "Sliding Gate Limit Sensor Retrofit",
     mediaTitle: "Gate Sensor Retrofit",
     mediaSubtitle: "Industrial controls · sensing · reliability",
@@ -48,6 +52,7 @@ window.PORTFOLIO_PROJECTS = [
     featured: true
   },
   {
+    order: 5,
     title: "KOMO Xtreme XL CNC",
     mediaTitle: "KOMO Xtreme XL CNC",
     mediaSubtitle: "Industrial automation · CNC · reliability",
@@ -60,6 +65,7 @@ window.PORTFOLIO_PROJECTS = [
     featured: true
   },
   {
+    order: 6,
     title: "Cable-Driven Parallel 3D Concrete Printer",
     mediaTitle: "Cable-Driven 3D Concrete Printer",
     mediaSubtitle: "Motion control · electronics · R&D",
@@ -72,6 +78,7 @@ window.PORTFOLIO_PROJECTS = [
     featured: false
   },
   {
+    order: 7,
     title: "Food-Serving Mobile Robot",
     mediaTitle: "Autonomous Mobile Robot",
     mediaSubtitle: "LiDAR · navigation · Android integration",
@@ -84,6 +91,7 @@ window.PORTFOLIO_PROJECTS = [
     featured: false
   },
   {
+    order: 8,
     title: "Centralized Multi-Screen Display Platform",
     mediaTitle: "Centralized Display Platform",
     mediaSubtitle: "Python · Flask · Socket.IO · Raspberry Pi",
@@ -96,6 +104,7 @@ window.PORTFOLIO_PROJECTS = [
     featured: false
   },
   {
+    order: 9,
     title: "Roadmoji Vehicle Display Controller",
     mediaTitle: "Roadmoji Vehicle Display",
     mediaSubtitle: "Embedded Linux · human interface · prototype",
