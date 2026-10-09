@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Fiber filling machine controls modernization: converting manual relay sequencing to Siemens S7-1200 PLC control with programmed timing, VFD run commands and simplified operator controls.">
+  <title>Fiber Filling Machine PLC Retrofit | Garry Bajwa</title>
+  <link rel="stylesheet" href="../styles.css?v=20261009b">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header"><div class="container nav-wrap">
+  <a class="brand" href="../index.html"><span class="brand-mark">GB</span><span>Garry Bajwa</span></a>
+  <nav class="nav"><a href="../index.html#projects">Projects</a><a href="#problem">Problem</a><a href="#design">PLC Retrofit</a><a href="#panel">Panel</a><a href="#result">Result</a></nav>
+</div></header>
+
+<main id="main">
+<section class="case-hero"><div class="container">
+  <div class="breadcrumb"><a href="../index.html">Portfolio</a> / Fiber Filling Machine PLC Retrofit</div>
+
+  <div class="case-title">
+    <p class="eyebrow">PLC Modernization · Machine Controls · Reliability</p>
+    <h1>Fiber Filling Machine — Relay Logic to Siemens S7-1200 PLC Retrofit</h1>
+    <p class="lead">Converted a sequence-sensitive relay-controlled fiber filling machine into a PLC-controlled system with automatic timing, simplified operator controls and an added emergency-stop function.</p>
+    <div class="case-meta">
+      <span class="tag">Siemens S7-1200</span><span class="tag">PLC</span><span class="tag">Relay Logic</span><span class="tag">VFD</span><span class="tag">Star-Delta</span><span class="tag">Machine Retrofit</span>
+    </div>
+  </div>
+
+  <div class="case-cover" style="background-image:linear-gradient(180deg,rgba(8,42,70,.06),rgba(8,42,70,.82)),linear-gradient(135deg,#8bcbe8,#66aaa8);">
+    <div class="case-cover-copy">
+      <strong>Controls modernization</strong>
+      <span>Manual relay sequencing was replaced by PLC-controlled startup, shutdown and timing while retaining the machine’s useful manual feeder functions.</span>
+    </div>
+  </div>
+
+  <div class="case-intro-grid">
+    <div class="detail-card"><h3>Engineering objective</h3><p>Make the machine easier to operate and less dependent on operator timing while reducing sequence-related resets, fiber jams and relay-logic troubleshooting complexity.</p></div>
+    <div class="detail-card"><h3>My contribution</h3><p>I reviewed the existing relay-controlled sequence, mapped the machine loads and control outputs, selected the PLC/output architecture, rewired the control system and programmed the startup, shutdown and timing logic.</p></div>
+    <div class="detail-card"><h3>Control architecture</h3><p>Siemens S7-1200 PLC with one digital output expansion module controlling five contactor functions, two VFD run commands and one solenoid valve.</p></div>
+  </div>
+
+  <div class="system-diagram">
+    <p class="eyebrow">Control concept</p>
+    <div class="flow">
+      <span class="node">Power Toggle</span><span class="arrow">→</span>
+      <span class="node">Start / Stop</span><span class="arrow">→</span>
+      <span class="node">S7-1200 Sequence Logic</span><span class="arrow">→</span>
+      <span class="node">Contactors + VFD Runs</span><span class="arrow">→</span>
+      <span class="node">Motors / Feeders / Solenoid</span>
+    </div>
+  </div>
+</div></section>
+
+<div class="project-brief-wrap"><div class="container"><div class="project-brief">
+  <span class="project-brief-label">Project overview</span>
+  <p>The original machine required the operator to manually execute a strict multi-button startup and shutdown sequence. I replaced the relay-based sequencing with a Siemens S7-1200 PLC so the machine could execute the required order and delays automatically from simple Start/Stop controls while preserving the manual feeder and direction functions operators still needed.</p>
+</div></div></div>
+
+<section id="problem" class="section"><div class="container">
+  <p class="eyebrow">01 · Operating problem</p>
+  <h2>The machine depended on the operator performing the sequence correctly every time</h2>
+  <p class="section-intro">The original control system worked, but normal operation depended heavily on button order and timing.</p>
+
+  <div class="case-list">
+    <article class="case-card"><div class="case-grid">
+      <div class="case-block"><strong>Manual startup</strong><span>The operator used five ON controls: main power followed by stages 1 through 4 in sequence.</span></div>
+      <div class="case-block"><strong>Manual shutdown</strong><span>Stopping required the reverse sequence: stage 4 back through stage 1, then main power OFF.</span></div>
+      <div class="case-block"><strong>Sequence sensitivity</strong><span>If a button was missed or the timing between steps was wrong, the machine could require a reset and complete restart.</span></div>
+      <div class="case-block"><strong>Material consequence</strong><span>If fiber was already inside the machine when the sequence failed, material could become stuck and create additional recovery work.</span></div>
+    </div></article>
+  </div>
+
+  <div class="callout">The core problem was not simply “too many buttons.” The process sequence itself belonged in the controller rather than in the operator’s memory and timing.</div>
+</div></section>
+
+<section id="design" class="section section-alt"><div class="container">
+  <p class="eyebrow">02 · PLC control redesign</p>
+  <h2>Move the sequence from manual button timing into deterministic PLC logic</h2>
+  <p class="section-intro">I simplified the operator interface while preserving the controls that still provided useful manual functionality.</p>
+
+  <div class="case-list">
+    <article class="case-card"><div class="case-grid">
+      <div class="case-block"><strong>Simplified operation</strong><span>The main operating workflow became a power ON/OFF toggle plus Start and Stop pushbuttons.</span></div>
+      <div class="case-block"><strong>Programmed sequencing</strong><span>The PLC executes the required machine sequence and inter-stage delays automatically rather than relying on manual timing.</span></div>
+      <div class="case-block"><strong>Manual feeder controls retained</strong><span>One manual feed button for each feeder remained available because those functions were still useful to the operator.</span></div>
+      <div class="case-block"><strong>Direction control retained</strong><span>The existing shared forward/reverse selector for the feeder system remained part of the operator controls.</span></div>
+      <div class="case-block"><strong>Emergency stop added</strong><span>An emergency-stop control was added during the retrofit; the original machine did not have one.</span></div>
+      <div class="case-block"><strong>Diagnosis simplified</strong><span>Centralizing the sequence in the PLC reduced the amount of distributed relay logic that had to be followed when diagnosing a control problem.</span></div>
+    </div></article>
+  </div>
+</div></section>
+
+<section id="panel" class="section"><div class="container">
+  <p class="eyebrow">03 · Panel architecture & I/O</p>
+  <h2>Eight outputs covered the machine’s contactors, VFD commands and door solenoid</h2>
+  <p class="section-intro">Before choosing the PLC hardware, I mapped the existing machine functions and counted the outputs required by the retrofit.</p>
+
+  <div class="case-list">
+    <article class="case-card"><h3>Motor and load control</h3><div class="case-grid">
+      <div class="case-block"><strong>Fiber opener motor</strong><span>Six motor leads were used for star-delta operation. Two contactors were dedicated to the star/delta switching portion of this motor control.</span></div>
+      <div class="case-block"><strong>Second three-phase motor</strong><span>Controlled through one contactor.</span></div>
+      <div class="case-block"><strong>Blower fan</strong><span>Controlled through one contactor.</span></div>
+      <div class="case-block"><strong>Main ON/OFF contactor</strong><span>One additional contactor handled the main control/power function, bringing the total contactor-controlled outputs to five.</span></div>
+    </div></article>
+
+    <article class="case-card"><h3>Additional outputs</h3><div class="case-grid">
+      <div class="case-block"><strong>Feeder 1 VFD</strong><span>The existing VFD already handled the feeder motor drive function, so the PLC only needed to provide its run command.</span></div>
+      <div class="case-block"><strong>Feeder 2 VFD</strong><span>The second feeder VFD similarly required a PLC run command rather than replacement of the drive.</span></div>
+      <div class="case-block"><strong>Door solenoid</strong><span>One PLC output operated the solenoid valve used for the machine door function.</span></div>
+      <div class="case-block"><strong>Total output requirement</strong><span>Five contactor functions + two VFD run signals + one solenoid valve = eight outputs.</span></div>
+    </div></article>
+  </div>
+
+  <div class="system-diagram">
+    <p class="eyebrow">Output allocation</p>
+    <div class="flow">
+      <span class="node">5 × Contactor Functions</span><span class="arrow">+</span>
+      <span class="node">2 × VFD Run Signals</span><span class="arrow">+</span>
+      <span class="node">1 × Solenoid Valve</span><span class="arrow">=</span>
+      <span class="node">8 PLC Outputs</span>
+    </div>
+  </div>
+
+  <div class="callout">This output count drove the hardware choice: an S7-1200 PLC plus one digital output expansion module provided the required control points without changing the existing VFD-driven feeder architecture.</div>
+</div></section>
+
+<section id="result" class="section section-alt"><div class="container">
+  <p class="eyebrow">04 · Result</p>
+  <h2>A machine that was easier to run, easier to recover and easier to troubleshoot</h2>
+
+  <div class="case-list">
+    <article class="case-card"><div class="case-grid">
+      <div class="case-block"><strong>Operator workflow</strong><span>The normal machine sequence no longer depended on the operator remembering and timing multiple ON/OFF steps.</span></div>
+      <div class="case-block"><strong>Repeatable timing</strong><span>Required delays became programmed values executed consistently by the PLC.</span></div>
+      <div class="case-block"><strong>Fewer sequence errors</strong><span>Simplified Start/Stop operation reduced the opportunities for missed or delayed manual sequence steps.</span></div>
+      <div class="case-block"><strong>Maintainability</strong><span>The control sequence became centralized and easier to follow than the previous distributed relay logic.</span></div>
+      <div class="case-block"><strong>Existing hardware reused</strong><span>The two feeder VFDs remained in service, with the PLC providing the run commands needed by the updated control scheme.</span></div>
+      <div class="case-block"><strong>Safety improvement</strong><span>The retrofit added an emergency-stop operator control that had not been present on the original machine.</span></div>
+    </div></article>
+  </div>
+
+  <div class="skill-cloud">
+    <span>Siemens S7-1200</span><span>PLC Programming</span><span>Relay Logic Modernization</span><span>Machine Sequencing</span>
+    <span>Star-Delta Motor Control</span><span>VFD Integration</span><span>Contactor Control</span><span>Digital I/O</span>
+    <span>Control Panel Retrofit</span><span>Troubleshooting</span><span>Operator Interface</span><span>Reliability Improvement</span>
+  </div>
+
+  <div class="callout">The strongest part of this project is the system-level change: I moved a fragile operator-dependent sequence into deterministic control logic while keeping useful existing hardware and manual functions intact.</div>
+
+  <div class="project-nav"><a href="../index.html#projects">← All projects</a><a href="komo-cnc.html">Next: KOMO CNC →</a></div>
+</div></section>
+</main>
+
+<footer class="site-footer"><div class="container footer-wrap"><span>Garry Bajwa · Engineering & Automation Portfolio</span><a class="external-link" href="https://www.linkedin.com/in/gurwinderjit-singh" target="_blank" rel="noreferrer">LinkedIn</a></div></footer>
+<script src="../project-lightbox.js?v=20261009b"></script>
+</body>
+</html>
