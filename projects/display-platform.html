@@ -1,76 +1,145 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Centralized multi-screen rendering and monitoring platform using Python, Flask, Socket.IO and Raspberry Pi display clients.">
-<title>Centralized Display Platform | Garry Bajwa</title><link rel="stylesheet" href="../styles.css"></head>
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Centralized multi-screen display rendering platform developed in Python and Flask with Socket.IO monitoring, remote refresh, media management and Raspberry Pi display clients.">
+  <title>Centralized Multi-Screen Display Platform | Garry Bajwa</title>
+  <link rel="stylesheet" href="../styles.css?v=20261008e">
+</head>
 <body>
-<header class="site-header"><div class="container nav-wrap"><a class="brand" href="../index.html"><span class="brand-mark">GB</span><span>Garry Bajwa</span></a><nav class="nav"><a href="../index.html#projects">Projects</a><a href="../index.html#contact">Contact</a></nav></div></header>
-<main>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container nav-wrap">
+  <a class="brand" href="../index.html"><span class="brand-mark">GB</span><span>Garry Bajwa</span></a>
+  <nav class="nav"><a href="../index.html#projects">Projects</a><a href="../index.html#capabilities">Capabilities</a><a href="../index.html#contact">Contact</a></nav>
+</div></header>
+
+<main id="main">
 <section class="case-hero"><div class="container">
-<div class="breadcrumb"><a href="../index.html">Portfolio</a> / Centralized Multi-Screen Display Platform</div>
-<div class="case-title"><p class="eyebrow">Industrial Software · Networking · Raspberry Pi</p><h1>Centralized Multi-Screen Display Platform</h1>
-<p class="lead">A server-driven media platform for distributing visual content to multiple unattended displays while monitoring client health, current media and remote refresh state.</p>
-<div class="case-meta"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">Socket.IO</span><span class="tag">Raspberry Pi</span><span class="tag">Linux</span></div></div>
-  <div class="case-cover" style="background-image:linear-gradient(180deg,rgba(8,42,70,.03),rgba(8,42,70,.78)),url('../assets/display/overview.jpg'),linear-gradient(135deg,#9ed8f5,#5db8b5);">
+  <div class="breadcrumb"><a href="../index.html">Portfolio</a> / Centralized Multi-Screen Display Platform</div>
+  <div class="case-title">
+    <p class="eyebrow">Custom Software · Systems Integration · Raspberry Pi</p>
+    <h1>Centralized Multi-Screen Display Platform</h1>
+    <p class="lead">A custom server-side software solution developed to make multiple unattended displays simple for users to update, monitor and refresh from one central interface.</p>
+    <div class="case-meta"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">Socket.IO</span><span class="tag">Raspberry Pi</span><span class="tag">Linux</span></div>
+  </div>
+
+  <div class="case-cover" style="background-image:linear-gradient(180deg,rgba(8,42,70,.04),rgba(8,42,70,.78)),url('../assets/display/display-manager.png'),linear-gradient(135deg,#9ed8f5,#5db8b5);">
     <div class="case-cover-copy">
-      <strong>Centralized Multi-Screen Display Platform</strong>
-      <span>Server-driven media distribution, client health monitoring and Raspberry Pi display endpoints.</span>
+      <strong>Centralized Display Manager</strong>
+      <span>One interface for display status, current media, remote refresh and screen-specific control.</span>
     </div>
   </div>
 
-<div class="case-intro-grid">
-  <div class="detail-card"><h3>Problem</h3><p>Multiple screens needed a consistent way to receive updated media without requiring manual configuration or intervention at each display.</p></div>
-  <div class="detail-card"><h3>Solution</h3><p>A centralized server rendered/distributed media while connected clients reported status and could be refreshed remotely.</p></div>
-</div>
+  <div class="case-intro-grid">
+    <div class="detail-card"><h3>Need</h3><p>Users needed a practical way to manage content across several screens without logging into or manually configuring each display endpoint.</p></div>
+    <div class="detail-card"><h3>My solution</h3><p>I developed a centralized software workflow that handled media distribution, screen-specific rendering, status monitoring and remote refresh while keeping the operator experience simple.</p></div>
+  </div>
 
-<div class="system-diagram"><p class="eyebrow">Architecture</p><div class="flow">
-  <span class="node">Media Folders</span><span class="arrow">→</span><span class="node">Python / Flask Server</span><span class="arrow">↔</span>
-  <span class="node">Socket.IO</span><span class="arrow">↔</span><span class="node">Raspberry Pi Clients</span><span class="arrow">→</span><span class="node">Displays</span>
-</div></div>
+  <div class="system-diagram">
+    <p class="eyebrow">Software architecture</p>
+    <div class="flow">
+      <span class="node">User Media Folders</span><span class="arrow">→</span>
+      <span class="node">Python / Flask Server</span><span class="arrow">↔</span>
+      <span class="node">Socket.IO</span><span class="arrow">↔</span>
+      <span class="node">Raspberry Pi / Browser Clients</span><span class="arrow">→</span>
+      <span class="node">Assigned Displays</span>
+    </div>
+  </div>
 </div></section>
 
 <section class="section"><div class="container">
-<p class="eyebrow">System design</p><h2>Simple content updates, visible client health</h2>
-<div class="case-list">
-  <article class="case-card"><h3>Media workflow</h3><div class="case-grid">
-    <div class="case-block"><strong>Operator workflow</strong><span>Users could place images or video into designated folders rather than configure every screen individually.</span></div>
-    <div class="case-block"><strong>Automatic updates</strong><span>Folder monitoring rebuilt the media list and Socket.IO pushed updates to connected displays.</span></div>
-  </div></article>
-  <article class="case-card"><h3>Display monitoring</h3><div class="case-grid">
-    <div class="case-block"><strong>Heartbeats</strong><span>Clients periodically reported screen identity, current media and last-seen state.</span></div>
-    <div class="case-block"><strong>Dashboard</strong><span>A browser-based manager showed Online / Stale / Offline status, current media and refresh controls.</span></div>
-  </div></article>
-  <article class="case-card"><h3>Unattended reliability</h3><div class="case-grid">
-    <div class="case-block"><strong>Video handling</strong><span>Playback logic included watchdog/fallback behavior so a failed or stalled video would not permanently stop the slideshow.</span></div>
-    <div class="case-block"><strong>Client operation</strong><span>Raspberry Pi/Linux endpoints were used as unattended display clients, including a large-format LED display endpoint.</span></div>
-  </div></article>
-</div>
+  <p class="eyebrow">Case 01</p>
+  <h2>From manual screen updates to one central workflow</h2>
+  <p class="section-intro">The software was designed around the user’s real task: put the right media on the right screen, confirm that the screen is alive, and recover it remotely when needed.</p>
+  <div class="case-list">
+    <article class="case-card"><div class="case-grid">
+      <div class="case-block"><strong>Screen-specific media</strong><span>Each display was associated with its own media folder and endpoint so content could be managed independently without hard-coding every screen into the user workflow.</span></div>
+      <div class="case-block"><strong>Automatic discovery</strong><span>The server discovered configured media folders and generated the corresponding display routes automatically.</span></div>
+      <div class="case-block"><strong>Simple updates</strong><span>Users could add, remove or rename supported media files in the appropriate folder instead of editing application code or visiting each screen.</span></div>
+      <div class="case-block"><strong>Mixed media</strong><span>The rendering workflow supported images, GIFs and MP4 video, including configurable image timing and video playback handling.</span></div>
+    </div></article>
+  </div>
+</div></section>
 
+<section class="section section-alt"><div class="container">
+  <p class="eyebrow">Case 02</p>
+  <h2>Live status and remote display control</h2>
+  <p class="section-intro">The browser-based Display Manager turned the system into an operational tool rather than just a slideshow server.</p>
+  <div class="case-list">
+    <article class="case-card"><div class="case-grid">
+      <div class="case-block"><strong>Heartbeat monitoring</strong><span>Connected displays periodically reported their screen identity, current media and last-seen state.</span></div>
+      <div class="case-block"><strong>Online / stale / offline</strong><span>The manager translated heartbeat timing into a simple visual state so an operator could immediately see which endpoints needed attention.</span></div>
+      <div class="case-block"><strong>Current media</strong><span>The dashboard showed what each connected display was currently rendering.</span></div>
+      <div class="case-block"><strong>Remote refresh</strong><span>Individual displays or all displays could be refreshed from the central interface.</span></div>
+    </div></article>
+  </div>
+
+  <div class="case-media-block">
+    <p class="eyebrow">Software Evidence</p>
+    <div class="photo-grid">
+      <figure class="photo-card">
+        <img src="../assets/display/display-manager.png" alt="Central Display Manager showing online stale and offline screen status">
+        <figcaption><strong>Display Manager</strong>Browser dashboard for connected-screen health, current media and remote refresh.</figcaption>
+      </figure>
+      <figure class="photo-card">
+        <img src="../assets/display/server-control.png" alt="Screen renderer server control application with live Socket.IO server output">
+        <figcaption><strong>Server Control</strong>Operator-facing server control and live connection/output view used to start, stop, restart and verify the rendering service.</figcaption>
+      </figure>
+    </div>
+  </div>
+</div></section>
+
+<section class="section"><div class="container">
+  <p class="eyebrow">Case 03</p>
+  <h2>Unattended display reliability</h2>
+  <p class="section-intro">The endpoints were intended to run continuously, so the software included behavior for automatic media updates and recovery from common playback problems.</p>
+  <div class="case-list">
+    <article class="case-card"><div class="case-grid">
+      <div class="case-block"><strong>Folder monitoring</strong><span>Changes to media folders were detected and pushed to connected screens without rebuilding the application.</span></div>
+      <div class="case-block"><strong>Real-time communication</strong><span>Socket.IO handled update notifications, display registration, heartbeat reporting and refresh commands.</span></div>
+      <div class="case-block"><strong>Playback resilience</strong><span>Video watchdog/fallback logic prevented a failed or stalled video from permanently stopping an unattended slideshow.</span></div>
+      <div class="case-block"><strong>Endpoint model</strong><span>Raspberry Pi/Linux clients ran the display view in kiosk-style browser sessions and received their assigned media from the central server.</span></div>
+    </div></article>
+  </div>
+
+  <div class="case-media-block">
+    <p class="eyebrow">Real Deployment</p>
+    <div class="photo-grid">
+      <figure class="photo-card">
+        <img src="../assets/display/common-room-display.jpeg" alt="Common room display running centrally managed media">
+        <figcaption><strong>Common-room display endpoint</strong>One of the real screens receiving centrally managed content from the platform.</figcaption>
+      </figure>
+    </div>
+  </div>
+</div></section>
+
+<section class="section section-alt"><div class="container">
+  <p class="eyebrow">Engineering value</p>
+  <h2>Custom software built around the operator</h2>
+  <p class="section-intro">The system combined backend services, networking, endpoint behavior and a user-facing control layer into one practical internal tool.</p>
+  <div class="skill-cloud">
+    <span>Python</span><span>Flask</span><span>Flask-SocketIO</span><span>Watchdog</span><span>HTML / JavaScript</span>
+    <span>Raspberry Pi</span><span>Linux</span><span>Networking</span><span>Real-Time Monitoring</span><span>Systems Integration</span>
+  </div>
+  <div class="media-note">The large-format LED installation is intentionally treated as a separate hardware/electronics/networking project. Future concepts such as production metrics, bottleneck alerts and 3D rendering are not presented here as deployed functionality.</div>
+</div></section>
+
+<section class="section"><div class="container">
   <div class="project-media-block">
     <p class="eyebrow">Project media</p>
-    <h2>Engineering evidence</h2>
+    <h2>Software integration overview</h2>
     <div class="media-gallery">
-      
-      <div class="media-tile media-placeholder" style="background-image:linear-gradient(180deg,rgba(8,39,63,.04),rgba(8,39,63,.78)),url('../assets/display/overview.jpg'),linear-gradient(135deg,#7bc8ec,#5db8b5);">
-        <span>System Overview<small>Centralized media-to-display architecture.</small></span>
-      </div>
-      <div class="media-tile media-placeholder" style="background-image:linear-gradient(180deg,rgba(8,39,63,.04),rgba(8,39,63,.78)),url('../assets/display/display-manager.jpg'),linear-gradient(135deg,#7bc8ec,#5db8b5);">
-        <span>Display Manager<small>Browser dashboard for client state and current media.</small></span>
-      </div>
-      <div class="media-tile media-placeholder" style="background-image:linear-gradient(180deg,rgba(8,39,63,.04),rgba(8,39,63,.78)),url('../assets/display/server-control.jpg'),linear-gradient(135deg,#7bc8ec,#5db8b5);">
-        <span>Server Control<small>Desktop/server-side operational controls.</small></span>
-      </div>
-      <div class="media-tile media-placeholder" style="background-image:linear-gradient(180deg,rgba(8,39,63,.04),rgba(8,39,63,.78)),url('../assets/display/led-display.jpg'),linear-gradient(135deg,#7bc8ec,#5db8b5);">
-        <span>Large-Format LED Endpoint<small>One of the display endpoints integrated with the system.</small></span>
-      </div>
+      <div class="media-tile media-placeholder" style="background-image:linear-gradient(180deg,rgba(8,39,63,.04),rgba(8,39,63,.78)),url('../assets/display/display-manager.png'),linear-gradient(135deg,#7bc8ec,#5db8b5);"><span>Display Manager<small>Screen health, current media and remote controls.</small></span></div>
+      <div class="media-tile media-placeholder" style="background-image:linear-gradient(180deg,rgba(8,39,63,.04),rgba(8,39,63,.78)),url('../assets/display/server-control.png'),linear-gradient(135deg,#7bc8ec,#5db8b5);"><span>Server Control<small>Service controls and live server output.</small></span></div>
+      <div class="media-tile media-placeholder" style="background-image:linear-gradient(180deg,rgba(8,39,63,.04),rgba(8,39,63,.78)),url('../assets/display/common-room-display.jpeg'),linear-gradient(135deg,#7bc8ec,#5db8b5);"><span>Display Endpoint<small>Real common-room screen receiving centrally managed media.</small></span></div>
     </div>
   </div>
 
-<div class="skill-cloud"><span>Python</span><span>Flask</span><span>Socket.IO</span><span>Linux</span><span>Raspberry Pi</span><span>Networking</span><span>Real-Time Monitoring</span><span>Systems Integration</span></div>
-<div class="media-note">Future concepts such as live production metrics and 3D rendering are intentionally not presented here as deployed functionality.</div>
-<div class="project-nav"><a href="food-robot.html">← Mobile Robot</a><a href="roadmoji.html">Next: Roadmoji →</a></div>
+  <div class="project-nav"><a href="food-robot.html">← Mobile Robot</a><a href="roadmoji.html">Next: Roadmoji →</a></div>
 </div></section>
 </main>
+
 <footer class="site-footer"><div class="container footer-wrap"><span>Garry Bajwa · Engineering & Automation Portfolio</span><a class="external-link" href="https://www.linkedin.com/in/gurwinderjit-singh" target="_blank" rel="noreferrer">LinkedIn</a></div></footer>
-  <script src="../project-lightbox.js?v=20261007b"></script>
-</body></html>
+<script src="../project-lightbox.js?v=20261008e"></script>
+</body>
+</html>

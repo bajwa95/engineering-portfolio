@@ -74,13 +74,13 @@ window.PORTFOLIO_PROJECTS = [
   {
     title: "Centralized Multi-Screen Display Platform",
     mediaTitle: "Centralized Display Platform",
-    mediaSubtitle: "Python · Raspberry Pi · networking",
-    kicker: "Industrial Software · Raspberry Pi · Networking",
-    description: "A server-driven display system for distributing media to multiple screens with live status, heartbeats, remote refresh and Raspberry Pi clients.",
+    mediaSubtitle: "Python · Flask · Socket.IO · Raspberry Pi",
+    kicker: "Custom Software · Systems Integration · Networking",
+    description: "Custom centralized software for screen-specific media rendering, live display status, heartbeat monitoring and remote refresh across multiple unattended displays.",
     tags: ["Python", "Flask", "Socket.IO", "Linux", "Raspberry Pi"],
     href: "projects/display-platform.html",
-    image: "assets/display/overview.jpg",
-    imageAlt: "Centralized multi-screen display platform",
+    image: "assets/display/display-manager.png",
+    imageAlt: "Central Display Manager showing connected screen status and media controls",
     featured: false
   },
   {
