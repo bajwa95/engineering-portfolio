@@ -12,6 +12,18 @@ window.PORTFOLIO_PROJECTS = [
     featured: true
   },
   {
+    title: "John Deere 450C Fuel-System Reliability Retrofit",
+    mediaTitle: "Dozer Fuel-System Retrofit",
+    mediaSubtitle: "Mechanical troubleshooting · 12 VDC · reliability",
+    kicker: "Mechanical Troubleshooting · Reliability Retrofit · Field Repair",
+    description: "Diagnosed reverse flow through the original engine-driven lift pump, then bypassed it with a fused, ignition-switched electric pump feeding the existing filters.",
+    tags: ["Root Cause", "Fuel System", "12 VDC", "Field Repair", "Reliability"],
+    href: "projects/dozer-fuel-retrofit.html",
+    image: "assets/dozer-fuel-retrofit/electric-fuel-pump-installation.jpg",
+    imageAlt: "John Deere 450C electric fuel-pump retrofit feeding the existing fuel filters",
+    featured: true
+  },
+  {
     title: "Forklift Charger Electrical Reconfiguration",
     mediaTitle: "Forklift Charger Reconfiguration",
     mediaSubtitle: "Industrial electrical · transformer configuration · equipment relocation",

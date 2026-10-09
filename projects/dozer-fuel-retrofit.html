@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="John Deere 450C dozer fuel-system troubleshooting and reliability retrofit: diagnosing reverse flow through the original engine-driven lift pump and bypassing it with a fused, ignition-switched electric fuel pump.">
+  <title>John Deere 450C Fuel-System Reliability Retrofit | Garry Bajwa</title>
+  <link rel="stylesheet" href="../styles.css?v=20261008h">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header"><div class="container nav-wrap">
+  <a class="brand" href="../index.html"><span class="brand-mark">GB</span><span>Garry Bajwa</span></a>
+  <nav class="nav"><a href="../index.html#projects">Projects</a><a href="#diagnosis">Diagnosis</a><a href="#retrofit">Retrofit</a><a href="#validation">Validation</a></nav>
+</div></header>
+
+<main id="main">
+<section class="case-hero"><div class="container">
+  <div class="breadcrumb"><a href="../index.html">Portfolio</a> / John Deere 450C Fuel-System Reliability Retrofit</div>
+
+  <div class="case-title">
+    <p class="eyebrow">Mechanical Troubleshooting · Reliability Retrofit · Field Repair</p>
+    <h1>John Deere 450C Fuel-System Reliability Retrofit</h1>
+    <p class="lead">Diagnosed a hard-start condition by tracing abnormal fuel movement through the original engine-driven lift pump, then bypassed the failed supply path with a fused, ignition-switched electric pump feeding the existing filters.</p>
+    <div class="case-meta"><span class="tag">Root Cause</span><span class="tag">Fuel System</span><span class="tag">12 VDC</span><span class="tag">Field Repair</span><span class="tag">Reliability</span></div>
+  </div>
+
+  <div class="case-cover" style="background-image:linear-gradient(180deg,rgba(8,42,70,.03),rgba(8,42,70,.78)),url('../assets/dozer-fuel-retrofit/electric-fuel-pump-installation.jpg'),linear-gradient(135deg,#9ed8f5,#5db8b5);">
+    <div class="case-cover-copy">
+      <strong>Fuel-supply retrofit</strong>
+      <span>Electric lift-pump bypass installed ahead of the existing fuel filters after the original pump failed to maintain one-directional fuel transfer.</span>
+    </div>
+  </div>
+
+  <div class="case-intro-grid">
+    <div class="detail-card"><h3>Symptom</h3><p>The dozer was very difficult to start, pointing to a fuel-delivery problem that needed to be isolated before replacing components.</p></div>
+    <div class="detail-card"><h3>Engineering decision</h3><p>Because direct replacement of the original engine-driven pump would have required additional disassembly, I left it physically installed, removed it from the active fuel path and implemented a practical electric-pump bypass.</p></div>
+  </div>
+
+  <div class="system-diagram">
+    <p class="eyebrow">Troubleshooting path</p>
+    <div class="flow">
+      <span class="node">Hard Starting</span><span class="arrow">→</span>
+      <span class="node">Hand-Prime Observation</span><span class="arrow">→</span>
+      <span class="node">Outlet Bottle Test</span><span class="arrow">→</span>
+      <span class="node">Reverse Flow Observed</span><span class="arrow">→</span>
+      <span class="node">Electric-Pump Bypass</span><span class="arrow">→</span>
+      <span class="node">Start Validation</span>
+    </div>
+  </div>
+</div></section>
+
+<section id="diagnosis" class="section"><div class="container">
+  <p class="eyebrow">01 · Diagnosis</p>
+  <h2>Proving the pump was moving fuel both directions</h2>
+  <p class="section-intro">The diagnosis came from observing how the original lift pump behaved, not from replacing parts by assumption.</p>
+
+  <div class="case-list">
+    <article class="case-card"><div class="case-grid">
+      <div class="case-block"><strong>Manual-prime clue</strong><span>Operating the pump’s hand lever pushed fuel toward the outlet, but fuel was drawn backward again when the lever returned.</span></div>
+      <div class="case-block"><strong>Expected behavior</strong><span>A lift pump relies on inlet and outlet one-way valve action so the return stroke draws fresh fuel from the tank side instead of pulling discharged fuel back through the outlet.</span></div>
+      <div class="case-block"><strong>Outlet flow test</strong><span>I disconnected the outlet and placed the hose into a fuel-filled test bottle, using an immersed-hose arrangement similar in principle to hydraulic brake bleeding so forward and reverse movement could be seen clearly.</span></div>
+      <div class="case-block"><strong>Finding</strong><span>While the engine was cranked, fuel moved out toward the bottle and then back toward the pump. That behavior was consistent with failed or leaking internal one-way valve action and explained why the pump could not maintain effective supply flow.</span></div>
+    </div></article>
+  </div>
+
+  <div class="photo-grid">
+    <figure class="photo-card">
+      <img src="../assets/dozer-fuel-retrofit/original-engine-driven-pump.png" alt="Original John Deere dozer engine-driven fuel lift pump before retrofit">
+      <figcaption><strong>Original engine-driven lift pump</strong>The existing mechanical pump remained mounted on the engine while its fuel-delivery behavior was diagnosed.</figcaption>
+    </figure>
+    <figure class="photo-card">
+      <img src="../assets/dozer-fuel-retrofit/old-engine-driven-pump-annotated.png" alt="Annotated original lift-pump installation showing inlet outlet and engine-driven pump">
+      <figcaption><strong>Pump ports identified</strong>Annotated project photo showing the inlet, outlet and original engine-driven pump used during troubleshooting.</figcaption>
+    </figure>
+  </div>
+
+  <div class="case-media-block">
+    <p class="eyebrow">Diagnostic schematic</p>
+    <div class="photo-grid">
+      <figure class="photo-card">
+        <img src="../assets/dozer-fuel-retrofit/fuel-flow-diagnostic-diagram.png" alt="Fuel-system diagram comparing one-way lift-pump flow with observed reverse flow during outlet testing">
+        <figcaption><strong>Normal flow vs. observed behavior</strong>Conceptual diagram documenting the one-way fuel-transfer principle and the unexpected reverse flow observed during the outlet bottle test.</figcaption>
+      </figure>
+    </div>
+  </div>
+</div></section>
+
+<section id="retrofit" class="section section-alt"><div class="container">
+  <p class="eyebrow">02 · Field retrofit</p>
+  <h2>Bypass the failed supply path without unnecessary engine disassembly</h2>
+  <p class="section-intro">The repair objective was reliable fuel delivery with a serviceable installation, while avoiding the extra disassembly required to remove the original engine-driven pump.</p>
+
+  <div class="case-list">
+    <article class="case-card"><div class="case-grid">
+      <div class="case-block"><strong>Original pump</strong><span>Left physically installed on the engine, but bypassed so it no longer handled active fuel transfer.</span></div>
+      <div class="case-block"><strong>New fuel path</strong><span>Fuel tank → electric lift pump → existing fuel filters.</span></div>
+      <div class="case-block"><strong>Electrical supply</strong><span>The electric pump was powered from a 12 V ignition-switched circuit so pump operation follows the machine ignition.</span></div>
+      <div class="case-block"><strong>Circuit protection</strong><span>A fuse was added to protect the electric-pump supply circuit.</span></div>
+    </div></article>
+  </div>
+
+  <div class="system-diagram">
+    <p class="eyebrow">Final active fuel path</p>
+    <div class="flow">
+      <span class="node">Fuel Tank</span><span class="arrow">→</span>
+      <span class="node">12 V Electric Lift Pump</span><span class="arrow">→</span>
+      <span class="node">Existing Fuel Filters</span><span class="arrow">→</span>
+      <span class="node">Engine Fuel System</span>
+    </div>
+  </div>
+
+  <div class="photo-grid">
+    <figure class="photo-card">
+      <img src="../assets/dozer-fuel-retrofit/electric-fuel-pump-installation.jpg" alt="Electric fuel-pump bypass installation feeding the existing dual fuel filters">
+      <figcaption><strong>Electric-pump bypass</strong>Retrofit fuel path installed ahead of the existing filter assembly while the original engine-driven pump remained in place.</figcaption>
+    </figure>
+  </div>
+</div></section>
+
+<section id="validation" class="section"><div class="container">
+  <p class="eyebrow">03 · Validation</p>
+  <h2>Validate the repair at the symptom that started the investigation</h2>
+
+  <div class="case-list">
+    <article class="case-card"><div class="case-grid">
+      <div class="case-block"><strong>Before</strong><span>The machine was difficult to start because the original supply pump was not maintaining one-directional fuel delivery.</span></div>
+      <div class="case-block"><strong>After retrofit</strong><span>With the electric pump supplying the filters, the engine started within seconds.</span></div>
+      <div class="case-block"><strong>Result</strong><span>The practical field retrofit restored reliable starting without requiring removal of the original engine-driven pump.</span></div>
+      <div class="case-block"><strong>Reliability improvement</strong><span>The modified system moved the fuel-supply function to a separately powered, fused and serviceable electric pump.</span></div>
+    </div></article>
+  </div>
+
+  <div class="photo-grid">
+    <figure class="photo-card">
+      <img src="../assets/dozer-fuel-retrofit/-starting-validation.gif" alt="John Deere 450C starting after the electric fuel-pump retrofit">
+      <figcaption><strong>Starting validation</strong>Post-retrofit validation showing the dozer starting after the fuel-supply modification.</figcaption>
+    </figure>
+  </div>
+</div></section>
+
+<section class="section section-alt"><div class="container">
+  <p class="eyebrow">Engineering takeaway</p>
+  <h2>A field repair driven by failure behavior, not parts swapping</h2>
+  <p class="section-intro">This project is a compact example of the same troubleshooting approach I use on industrial equipment: understand the intended flow or sequence, create a simple test that exposes the failure mode, work around service constraints, and validate the correction against the original symptom.</p>
+
+  <div class="skill-cloud">
+    <span>Mechanical Troubleshooting</span><span>Fuel Systems</span><span>Root Cause Analysis</span><span>12 VDC</span>
+    <span>Electrical Integration</span><span>Field Repair</span><span>Reliability Retrofit</span><span>Functional Testing</span>
+  </div>
+
+  <div class="callout">The retrofit was intentionally practical: the original pump stayed on the engine, while the active fuel-supply function moved to a fused, ignition-switched electric pump that could be serviced independently.</div>
+
+  <div class="project-nav"><a href="../index.html#projects">← All projects</a><a href="gate-sensor-retrofit.html">Next: Gate Sensor Retrofit →</a></div>
+</div></section>
+</main>
+
+<footer class="site-footer"><div class="container footer-wrap"><span>Garry Bajwa · Engineering & Automation Portfolio</span><a class="external-link" href="https://www.linkedin.com/in/gurwinderjit-singh" target="_blank" rel="noreferrer">LinkedIn</a></div></footer>
+<script src="../project-lightbox.js?v=20261008h"></script>
+</body>
+</html>
