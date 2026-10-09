@@ -27,7 +27,7 @@
     </div>
   </div>
 
-  <div class="case-cover" style="background-image:linear-gradient(180deg,rgba(8,42,70,.06),rgba(8,42,70,.82)),linear-gradient(135deg,#8bcbe8,#66aaa8);">
+  <div class="case-cover" style="background-image:linear-gradient(180deg,rgba(8,42,70,.06),rgba(8,42,70,.82)),url('../assets/fiber-filling-plc-retrofit/machine-overview.jpg'),linear-gradient(135deg,#8bcbe8,#66aaa8);">
     <div class="case-cover-copy">
       <strong>Controls modernization</strong>
       <span>Manual relay sequencing was replaced by PLC-controlled startup, shutdown and timing while retaining the machine’s useful manual feeder functions.</span>
@@ -71,6 +71,17 @@
     </div></article>
   </div>
 
+  <div class="photo-grid">
+    <figure class="photo-card">
+      <img src="../assets/fiber-filling-plc-retrofit/control-panel-before.jpg" alt="Original fiber filling machine relay and timer control panel before PLC retrofit">
+      <figcaption><strong>Original control panel</strong>The relay/timer-based control system required the operator to follow the machine sequence manually.</figcaption>
+    </figure>
+    <figure class="photo-card">
+      <img src="../assets/fiber-filling-plc-retrofit/operator-panel-before.jpg" alt="Original fiber filling machine operator panel before control simplification">
+      <figcaption><strong>Original operator controls</strong>The previous interface relied on multiple sequence-dependent controls during startup and shutdown.</figcaption>
+    </figure>
+  </div>
+
   <div class="callout">The core problem was not simply “too many buttons.” The process sequence itself belonged in the controller rather than in the operator’s memory and timing.</div>
 </div></section>
 
@@ -88,6 +99,17 @@
       <div class="case-block"><strong>Emergency stop added</strong><span>An emergency-stop control was added during the retrofit; the original machine did not have one.</span></div>
       <div class="case-block"><strong>Diagnosis simplified</strong><span>Centralizing the sequence in the PLC reduced the amount of distributed relay logic that had to be followed when diagnosing a control problem.</span></div>
     </div></article>
+  </div>
+
+  <div class="photo-grid">
+    <figure class="photo-card">
+      <img src="../assets/fiber-filling-plc-retrofit/control-panel-after.jpg" alt="Fiber filling machine control panel after Siemens S7-1200 PLC retrofit">
+      <figcaption><strong>PLC control panel after retrofit</strong>The updated panel centralizes machine sequencing in the Siemens PLC while retaining the existing power-control hardware required by the machine.</figcaption>
+    </figure>
+    <figure class="photo-card">
+      <img src="../assets/fiber-filling-plc-retrofit/operator-panel-after.jpg" alt="Simplified fiber filling machine operator panel after PLC retrofit">
+      <figcaption><strong>Simplified operator panel</strong>Power, Start, Stop, feeder direction and manual feed functions remain available while unused openings are blanked.</figcaption>
+    </figure>
   </div>
 </div></section>
 
@@ -120,6 +142,21 @@
       <span class="node">1 × Solenoid Valve</span><span class="arrow">=</span>
       <span class="node">8 PLC Outputs</span>
     </div>
+  </div>
+
+  <div class="photo-grid">
+    <figure class="photo-card">
+      <img src="../assets/fiber-filling-plc-retrofit/contactors.png" alt="Contactor section of the fiber filling machine control panel">
+      <figcaption><strong>Contactor outputs</strong>Existing contactors remained the switching layer for the machine’s motor and power-control functions.</figcaption>
+    </figure>
+    <figure class="photo-card">
+      <img src="../assets/fiber-filling-plc-retrofit/vfds.png" alt="Existing variable frequency drives retained during the fiber filling machine PLC retrofit">
+      <figcaption><strong>Existing VFDs retained</strong>The feeder drives remained in service, with the PLC providing the required run commands.</figcaption>
+    </figure>
+    <figure class="photo-card">
+      <img src="../assets/fiber-filling-plc-retrofit/emergency-stop-control.png" alt="Emergency stop control added to the fiber filling machine">
+      <figcaption><strong>Emergency-stop control</strong>An emergency-stop operator control was added as part of the retrofit.</figcaption>
+    </figure>
   </div>
 
   <div class="callout">This output count drove the hardware choice: an S7-1200 PLC plus one digital output expansion module provided the required control points without changing the existing VFD-driven feeder architecture.</div>
