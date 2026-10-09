@@ -46,9 +46,9 @@
           </div>
 
           <div class="hero-specialties" aria-label="Engineering specialties">
-            <span><b>01</b> Automation & Controls</span>
-            <span><b>02</b> Manufacturing Systems</span>
-            <span><b>03</b> Software Integration</span>
+            <button type="button" class="hero-specialty" data-capability="automation"><b>01</b> Automation & Controls</button>
+            <button type="button" class="hero-specialty" data-capability="manufacturing"><b>02</b> Manufacturing Systems</button>
+            <button type="button" class="hero-specialty" data-capability="software"><b>03</b> Software Integration</button>
           </div>
         </div>
 
@@ -124,27 +124,42 @@
         <h2>Multidisciplinary by design</h2>
         <p class="section-intro">I am most effective where several engineering domains meet and the solution depends on understanding how the complete system behaves.</p>
 
-        <div class="capability-grid">
-          <article class="capability-card">
+        <div class="capability-grid" aria-label="Browse projects by capability">
+          <button type="button" class="capability-card capability-trigger is-active" data-capability="automation" aria-pressed="true">
             <span class="card-number">01</span>
-            <h3>Industrial automation</h3>
-            <p>CNC systems, VFDs, sensors, motion, machine interfaces, automated tool changing, equipment recovery and production validation.</p>
-          </article>
-          <article class="capability-card">
+            <span class="capability-title">Industrial automation</span>
+            <span class="capability-description">CNC systems, VFDs, sensors, motion, machine interfaces, automated tool changing, equipment recovery and production validation.</span>
+            <span class="capability-action">View related projects →</span>
+          </button>
+          <button type="button" class="capability-card capability-trigger" data-capability="electrical" aria-pressed="false">
             <span class="card-number">02</span>
-            <h3>Electrical & electronics</h3>
-            <p>Three-phase troubleshooting, motor/drive systems, embedded controllers, instrumentation, signal tracing and practical field integration.</p>
-          </article>
-          <article class="capability-card">
+            <span class="capability-title">Electrical & electronics</span>
+            <span class="capability-description">Three-phase troubleshooting, motor/drive systems, embedded controllers, instrumentation, signal tracing and practical field integration.</span>
+            <span class="capability-action">View related projects →</span>
+          </button>
+          <button type="button" class="capability-card capability-trigger" data-capability="manufacturing" aria-pressed="false">
             <span class="card-number">03</span>
-            <h3>Manufacturing systems</h3>
-            <p>Production visibility, process analysis, reliability improvement, operator workflows, material handling and technical problem solving.</p>
-          </article>
-          <article class="capability-card">
+            <span class="capability-title">Manufacturing systems</span>
+            <span class="capability-description">Production visibility, process analysis, reliability improvement, operator workflows, material handling and technical problem solving.</span>
+            <span class="capability-action">View related projects →</span>
+          </button>
+          <button type="button" class="capability-card capability-trigger" data-capability="software" aria-pressed="false">
             <span class="card-number">04</span>
-            <h3>Software integration</h3>
-            <p>Python, Flask, Socket.IO, PyQt, Android, Raspberry Pi and networked tools that connect physical operations with usable digital systems.</p>
-          </article>
+            <span class="capability-title">Software integration</span>
+            <span class="capability-description">Python, Flask, Socket.IO, PyQt, Android, Raspberry Pi and networked tools that connect physical operations with usable digital systems.</span>
+            <span class="capability-action">View related projects →</span>
+          </button>
+        </div>
+
+        <div class="capability-projects" id="capability-projects" aria-live="polite">
+          <div class="capability-projects-heading">
+            <div>
+              <p class="eyebrow">Related project involvement</p>
+              <h3 id="capability-projects-title">Industrial automation</h3>
+            </div>
+            <span class="capability-project-count" id="capability-project-count"></span>
+          </div>
+          <div class="capability-project-list" id="capability-project-list"></div>
         </div>
       </div>
     </section>
@@ -332,7 +347,7 @@
       <span>Automation · Systems · Electronics · Software</span>
     </div>
   </footer>
-  <script src="projects-data.js?v=20261008j"></script>
-  <script src="site.js?v=20261008j"></script>
+  <script src="projects-data.js?v=20261009a"></script>
+  <script src="site.js?v=20261009a"></script>
 </body>
 </html>
