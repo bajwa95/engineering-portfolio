@@ -98,7 +98,7 @@
       <div class="case-block"><strong>Folder monitoring</strong><span>Changes to media folders were detected and pushed to connected screens without rebuilding the application.</span></div>
       <div class="case-block"><strong>Real-time communication</strong><span>Socket.IO handled update notifications, display registration, heartbeat reporting and refresh commands.</span></div>
       <div class="case-block"><strong>Playback resilience</strong><span>Video watchdog/fallback logic prevented a failed or stalled video from permanently stopping an unattended slideshow.</span></div>
-      <div class="case-block"><strong>Endpoint model</strong><span>Raspberry Pi/Linux clients ran the display view in kiosk-style browser sessions and received their assigned media from the central server.</span></div>
+      <div class="case-block"><strong>Endpoint model</strong><span>Raspberry Pi/Linux clients ran the display view in kiosk-style browser sessions and received their assigned media from the central server. The same software stack served both indoor screens and the large-format LED display.</span></div>
     </div></article>
   </div>
 
@@ -107,7 +107,11 @@
     <div class="photo-grid">
       <figure class="photo-card">
         <img src="../assets/display/common-room-display.jpeg" alt="Common room display running centrally managed media">
-        <figcaption><strong>Common-room display endpoint</strong>One of the real screens receiving centrally managed content from the platform.</figcaption>
+        <figcaption><strong>Common-room display endpoint</strong>Indoor screen receiving centrally managed content through the display platform.</figcaption>
+      </figure>
+      <figure class="photo-card">
+        <img src="../assets/display/led-display-endpoint.jpeg" alt="Large-format outdoor LED display served by the same Raspberry Pi rendering platform">
+        <figcaption><strong>Large-format LED endpoint</strong>The outdoor LED screen was also rendered through a Raspberry Pi client connected to the same centralized software platform.</figcaption>
       </figure>
     </div>
   </div>
@@ -121,7 +125,7 @@
     <span>Python</span><span>Flask</span><span>Flask-SocketIO</span><span>Watchdog</span><span>HTML / JavaScript</span>
     <span>Raspberry Pi</span><span>Linux</span><span>Networking</span><span>Real-Time Monitoring</span><span>Systems Integration</span>
   </div>
-  <div class="media-note">The large-format LED installation is intentionally treated as a separate hardware/electronics/networking project. Future concepts such as production metrics, bottleneck alerts and 3D rendering are not presented here as deployed functionality.</div>
+  <div class="media-note">The large-format LED screen appears here only as a software-rendering endpoint because it used the same Raspberry Pi client and centralized server. Its physical installation, electronics, power and networking work will be documented separately as a hardware-integration project. Future concepts such as production metrics, bottleneck alerts and 3D rendering are not presented here as deployed functionality.</div>
 </div></section>
 
 <section class="section"><div class="container">
@@ -131,7 +135,8 @@
     <div class="media-gallery">
       <div class="media-tile media-placeholder" style="background-image:linear-gradient(180deg,rgba(8,39,63,.04),rgba(8,39,63,.78)),url('../assets/display/display-manager.png'),linear-gradient(135deg,#7bc8ec,#5db8b5);"><span>Display Manager<small>Screen health, current media and remote controls.</small></span></div>
       <div class="media-tile media-placeholder" style="background-image:linear-gradient(180deg,rgba(8,39,63,.04),rgba(8,39,63,.78)),url('../assets/display/server-control.png'),linear-gradient(135deg,#7bc8ec,#5db8b5);"><span>Server Control<small>Service controls and live server output.</small></span></div>
-      <div class="media-tile media-placeholder" style="background-image:linear-gradient(180deg,rgba(8,39,63,.04),rgba(8,39,63,.78)),url('../assets/display/common-room-display.jpeg'),linear-gradient(135deg,#7bc8ec,#5db8b5);"><span>Display Endpoint<small>Real common-room screen receiving centrally managed media.</small></span></div>
+      <div class="media-tile media-placeholder" style="background-image:linear-gradient(180deg,rgba(8,39,63,.04),rgba(8,39,63,.78)),url('../assets/display/common-room-display.jpeg'),linear-gradient(135deg,#7bc8ec,#5db8b5);"><span>Indoor Display Endpoint<small>Common-room screen receiving centrally managed media.</small></span></div>
+      <div class="media-tile media-placeholder" style="background-image:linear-gradient(180deg,rgba(8,39,63,.04),rgba(8,39,63,.78)),url('../assets/display/led-display-endpoint.jpeg'),linear-gradient(135deg,#7bc8ec,#5db8b5);"><span>Large-Format LED Endpoint<small>Outdoor display rendered through the same Raspberry Pi client architecture.</small></span></div>
     </div>
   </div>
 
@@ -140,6 +145,6 @@
 </main>
 
 <footer class="site-footer"><div class="container footer-wrap"><span>Garry Bajwa · Engineering & Automation Portfolio</span><a class="external-link" href="https://www.linkedin.com/in/gurwinderjit-singh" target="_blank" rel="noreferrer">LinkedIn</a></div></footer>
-<script src="../project-lightbox.js?v=20261008e"></script>
+<script src="../project-lightbox.js?v=20261008f"></script>
 </body>
 </html>
