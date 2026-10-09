@@ -149,7 +149,7 @@ window.PORTFOLIO_PROJECTS = [
       software: "Built the Raspberry Pi, Python, PyQt and Flask workflow for Stream Deck-triggered display control and browser-based media management."
     },
     featured: false
-  }
+  },
   {
     order: 10,
     title: "Fiber Filling Machine PLC Retrofit",
