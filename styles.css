@@ -362,6 +362,26 @@ h3{line-height:1.2}
   font-size:.88rem
 }
 .flow .arrow{color:var(--teal)}
+.project-brief-wrap{padding:26px 0 0;background:#fff}
+.project-brief{
+  max-width:980px;
+  border:1px solid #d4e2ec;
+  border-left:4px solid var(--accent);
+  border-radius:0 16px 16px 0;
+  background:#f8fbfd;
+  padding:18px 22px;
+  box-shadow:0 8px 22px rgba(37,72,105,.04)
+}
+.project-brief-label{
+  display:block;
+  margin-bottom:5px;
+  color:var(--accent);
+  font-size:.75rem;
+  font-weight:800;
+  letter-spacing:.11em;
+  text-transform:uppercase
+}
+.project-brief p{margin:0;color:#4d657a;line-height:1.7;font-size:1rem}
 .case-list{display:grid;gap:18px;margin-top:28px}
 .case-card{padding:28px}
 .case-card h3{margin:0 0 19px;font-size:1.35rem}
