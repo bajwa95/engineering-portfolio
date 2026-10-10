@@ -135,3 +135,24 @@
 
   if (capabilityList) renderCapability("automation", false);
 })();
+
+(function () {
+  const endpoint = "https://portfolio-analytics.gurwinderjitsingh05.workers.dev";
+  const params = new URLSearchParams(window.location.search);
+  const visit = {
+    page: window.location.pathname,
+    source: params.get("src"),
+    referrer: document.referrer || null
+  };
+
+  try {
+    navigator.sendBeacon(endpoint, JSON.stringify(visit));
+  } catch (_) {
+    fetch(endpoint, {
+      method: "POST",
+      body: JSON.stringify(visit),
+      keepalive: true,
+      mode: "cors"
+    }).catch(() => {});
+  }
+})();
